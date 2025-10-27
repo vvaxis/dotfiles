@@ -1,0 +1,53 @@
+/* --- PALETA PRINCIPAL --- */
+@define-color accent #9A77FF;
+@define-color bg_dark rgba(30, 21, 51, 0.92);
+@define-color bg_medium rgba(46, 33, 74, 0.85);
+@define-color text_light #F8F8F2;
+@define-color border_color rgba(154, 119, 255, 0.8);
+
+/* --- JANELAS --- */
+window {
+    background-color: @bg_dark;
+    border: 2px solid @border_color;
+    border-radius: 10px;
+    padding: 8px;
+    color: @text_light;
+    font-family: "JetBrains Mono", "Noto Sans", sans-serif;
+    font-size: 11pt;
+}
+
+/* --- NOTIFICAÇÕES --- */
+.notification {
+    background: @bg_medium;
+    border: 1px solid @border_color;
+    border-radius: 8px;
+    margin: 4px;
+    padding: 8px;
+}
+
+/* --- URGÊNCIAS --- */
+.notification.low { border-color: #7E57C2; }
+.notification.normal { border-color: @accent; }
+.notification.critical {
+    background-color: rgba(106, 27, 154, 0.9);
+    border-color: #FFCDD2;
+}
+
+/* --- BOTÕES --- */
+button {
+    background: @accent;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    padding: 6px 10px;
+    margin: 2px;
+}
+
+button:hover { background: #A78FFF; }  /* um tom mais claro do accent */
+button:active { background: #8662FF; } /* um tom mais escuro */
+
+/* --- CABEÇALHO E TITULOS --- */
+label {
+    font-weight: 500;
+    color: @text_light;
+}

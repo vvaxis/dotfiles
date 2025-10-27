@@ -1,0 +1,26 @@
+{
+  "position": "top-right",
+  "control-center-position": "right",
+  "layer": "overlay",
+  "keyboard-shortcuts": true,
+  "notification-icons": true,
+  "notification-window-width": 400,
+  "timeout": 5000,
+  "ignore-empty": false,
+  "widgets": ["notifications", "buttons"],
+  "button-actions": {
+    "do-not-disturb": "toggle",
+    "clear-all": "clear"
+  },
+  "actions": {
+    "default": "open",
+    "left-click": "open",
+    "right-click": "dismiss"
+  },
+  "dnd-default": false,
+  "history-size": 100,
+  "sort": "-time",
+  "show-age": true,
+  "group-by-app": true,
+  "max-visible": 5
+}

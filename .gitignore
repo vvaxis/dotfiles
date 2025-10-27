@@ -1,0 +1,4 @@
+# Ignorar arquivos de cache e temporários
+*.swp
+*.tmp
+.cache/

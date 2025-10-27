@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1760830435619031-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>micro</icon>
+	<name>Abrir com Micro</name>
+	<submenu></submenu>
+	<unique-id>1760855204511569-1</unique-id>
+	<command>kitty -e micro %f</command>
+	<description>Abrir arquivos com micro</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<text-files/>
+</action>
+<action>
+	<icon>changes-allow</icon>
+	<name>Abrir como administrador</name>
+	<submenu></submenu>
+	<unique-id>1760864834297051-1</unique-id>
+	<command>thunar admin://%f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+</actions>
