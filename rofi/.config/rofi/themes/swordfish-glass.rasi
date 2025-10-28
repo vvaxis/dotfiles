@@ -1,0 +1,138 @@
+/**
+ * Swordfish Glass Clean — minimal glass + console
+ * - UMA camada (só a janela tem fundo); widgets internos são transparentes
+ * - Transparência real (requer compositor)
+ * - Prompt ">>>"
+ * - Marcador "swordfish" discreto no canto inferior direito
+ * - Roxo apenas como detalhe (cursor/seleção)
+ */
+
+* {
+    /* Paleta */
+    bg:         #0e1116;      /* base da janela (vidro escuro neutro) */
+    fg:         #e7e7ec;      /* texto claro */
+    accent:     #8a42f4;      /* roxo (ornamento) */
+    accentalt:  #00a6c9;      /* ciano (ornamento secundário) */
+
+    /* Defaults (sem @var aqui) */
+    font: "JetBrains Mono Nerd Font 11";
+    text-color: #e7e7ec;
+    background-color: transparent;   /* tudo transparente por padrão */
+    border: 0px;
+    border-radius: 2px;              /* leve arredondamento, bem sutil */
+
+    /* Cursor console */
+    cursor-color: #8a42f4;
+    cursor-width: 2px;
+    hide-cursor-on-empty: true;
+}
+
+/* Janela — única “placa de vidro” */
+window {
+    location: north west;
+    anchor:   north west;
+    width:    30%;
+    x-offset: 14px;
+    y-offset: 14px;
+
+    transparency: "real";
+    background-color: rgba(14,17,22,0.42);  /* vidro leve */
+
+    border: 0px;                 /* sem moldura para reduzir poluição visual */
+    border-radius: 2px;
+    padding: 10px;
+}
+
+/* Layout simples e marker no rodapé direito */
+mainbox {
+    children: [ inputbar, listview, textbox-swordfish ];
+    spacing: 6px;
+}
+
+/* Barra de entrada — sem caixa, só texto */
+inputbar {
+    orientation: horizontal;
+    children: [ prompt, entry ];
+    background-color: transparent;
+    border: 0px;
+    padding: 0px;
+    spacing: 8px;
+}
+
+/* Prompt fixo ">>>" (console vibe) */
+prompt {
+    content: ">>>";
+    text-color: @accentalt;                  /* ciano sutil */
+    font: "JetBrains Mono Nerd Font Bold 11";
+    vertical-align: 0.5;
+    padding: 0px 6px 0px 0px;
+}
+
+/* Campo de entrada — transparente, cursor roxo */
+entry {
+    placeholder: "type to search…";
+    placeholder-color: @accent;              /* roxo só no placeholder */
+    background-color: transparent;
+    text-color: @fg;
+    cursor-color: @accent;
+    cursor-width: 2px;
+    blink: true;
+}
+
+/* Lista — transparente, sem caixas adicionais */
+listview {
+    columns: 1;
+    lines: 10;               /* compacto */
+    spacing: 2px;
+    scrollbar: true;
+    fixed-height: false;
+    background-color: transparent;
+    border: 0px;
+    padding: 2px 0px;
+}
+
+element {
+    background-color: transparent;
+    padding: 2px 6px;
+    border: 0px;
+}
+element-text {
+    text-color: @fg;
+    vertical-align: 0.5;
+}
+
+/* Seleção: véu muito leve + barra esquerda roxa fina */
+element selected {
+    background-color: rgba(138,66,244,0.10);
+    text-color: @accent;
+
+    /* borda esquerda como indicador de seleção (sem sólidos) */
+    border: 0px 0px 0px 2px;   /* top right bottom left */
+    border-color: @accent;
+    border-radius: 0px;
+}
+
+/* Scrollbar minimalista e transparente */
+scrollbar {
+    handle-width: 6px;
+    handle-color: @accentalt;
+    background-color: transparent;
+    handle-rounded-corners: false;
+}
+
+/* Marcador "swordfish" no canto inferior direito, discreto */
+textbox-swordfish {
+    content: "swordfish";
+    text-color: rgba(138,66,244,0.55);
+    font: "JetBrains Mono Nerd Font Italic 9";
+    horizontal-align: 1.0;     /* direita */
+    background-color: transparent;
+    border: 0px;
+    padding: 2px 0px 0px 0px;
+}
+
+/* Nada de caixas extras por padrão */
+message, overlay, button {
+    background-color: transparent;
+    border: 0px;
+}

@@ -9,4 +9,10 @@
 
 //@theme "/usr/share/rofi/themes/arthur.rasi"
 
-@theme "/usr/share/rofi/themes/purple.rasi"
+//@theme "/usr/share/rofi/themes/purple.rasi"
+
+@theme "swordfish"
+
+//@theme "swordfish-console"
+
+//@theme "swordfish-glass"

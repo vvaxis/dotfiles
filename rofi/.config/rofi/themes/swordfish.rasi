@@ -1,0 +1,145 @@
+/**
+ * Swordfish Theme — Rofi (Space Western) • revisão leve (glass + console)
+ */
+
+* {
+    /* --- Paleta base --- */
+    bg:            #0d0c1a;   /* fundo principal */
+    fg:            #e0e0e0;   /* texto */
+    accent:        #8a42f4;   /* roxo principal (detalhe) */
+    accent-alt:    #00a6c9;   /* ciano secundário (detalhe) */
+    border:        #4f46b5;   /* bordas */
+    warning:       #f25d94;   /* alerta */
+    success:       #35c759;   /* sucesso */
+
+    /* --- Fontes e dimensões (um pouco menos "gordo") --- */
+    font: "JetBrains Mono Nerd Font 10";
+    text-color: @fg;
+    background-color: @bg;
+    border-color: @border;
+
+    border: 1px solid;      /* de 2px -> 1px */
+    border-radius: 4px;     /* de 6px -> 4px */
+    padding: 3px;           /* de 4px -> 3px */
+    margin: 4px;            /* de 6px -> 4px */
+
+    /* --- Cursor e highlight --- */
+    cursor-color: @accent;  /* detalhe roxo discreto */
+    cursor-width: 2px;      /* de 4px -> 2px */
+    hide-cursor-on-empty: true;
+
+    /* (REMOVIDO: transparency aqui; vai para window) */
+}
+
+/* --- Janela principal (mais "glass") --- */
+window {
+    width: 34%;                           /* de 38% -> 34% */
+    location: center;
+    border: 1px solid;                    /* de 2px -> 1px */
+    border-color: @border;
+    border-radius: 6px;                   /* de 12px -> 6px */
+    transparency: "real";                 /* mover para cá */
+    background-color: rgba(13, 12, 26, 0.45); /* de 0.94 -> 0.45 (vidro) */
+    padding: 8px;                         /* de 12px -> 8px */
+}
+
+/* --- Barra de entrada (console vibe, mais limpa) --- */
+inputbar {
+    orientation: horizontal;
+    children: [prompt, entry];
+    background-color: rgba(13,12,26,0.20);  /* de 0.8 -> 0.20 (quase vidro) */
+    border: 1px;
+    border-color: @border;
+    border-radius: 4px;                     /* de 8px -> 4px */
+    padding: 3px 6px;                       /* de 4px 8px -> 3px 6px */
+    spacing: 6px;
+}
+
+prompt {
+    /* deixa explícito o prompt ">>>", mais console */
+    content: ">>>";
+    text-color: @accent-alt;                 /* ciano sutil pro prompt */
+    font: "JetBrains Mono Nerd Font Bold 10";
+    padding: 2px 6px 2px 2px;
+    vertical-align: 0.5;
+}
+
+entry {
+    placeholder: ">>> search swordfish";         /* mais neutro que “Search the stars...” */
+    placeholder-color: @accent;             /* roxo só como detalhe */
+    background-color: transparent;
+    text-color: @fg;
+    cursor-color: @accent;
+    cursor-width: 2px;
+    blink: true;
+}
+
+/* --- Lista de elementos --- */
+listview {
+    columns: 1;
+    lines: 9;             /* de 8 -> 9 (melhor aproveitamento com fonte 10) */
+    spacing: 3px;         /* de 4px -> 3px */
+    scrollbar: true;
+    fixed-height: false;
+    border: 0px;
+}
+
+/* --- Cada item da lista --- */
+element {
+    background-color: transparent;
+    padding: 3px 6px;     /* de 4px -> 3px */
+    border: 0px;
+}
+
+element-text {
+    text-color: @fg;
+    vertical-align: 0.5;
+}
+
+/* seleção menos chamativa (véu leve, sem roxo berrando no texto) */
+element selected {
+    background-color: rgba(138,66,244,0.12); /* de 0.25 -> 0.12 */
+    text-color: @fg;                         /* antes @accent */
+    border: 0px 0px 0px 2px;                 /* barra esquerda fina */
+    border-color: @accent;
+    border-radius: 2px;                      /* de 6px -> 2px */
+}
+
+/* --- Scrollbar --- */
+scrollbar {
+    handle-width: 6px;
+    handle-color: @accent-alt;
+    background-color: rgba(13,12,26,0.15);   /* de 0.4 -> 0.15 */
+    handle-rounded-corners: true;
+}
+
+/* --- Modo switcher (botões) --- */
+button {
+    background-color: transparent;
+    text-color: @accent-alt;
+    padding: 2px 5px;       /* de 3x6 -> 2x5 */
+    border-radius: 3px;     /* de 4 -> 3 */
+}
+
+button selected {
+    background-color: rgba(0,166,201,0.18);  /* troca roxo por ciano suave */
+    text-color: @fg;
+}
+
+/* --- Mensagens (erros/avisos) --- */
+message {
+    background-color: rgba(13,12,26,0.40);   /* de 0.9 -> 0.40 (glass) */
+    border: 1px;
+    border-color: @border;
+    padding: 5px;            /* de 6 -> 5 */
+}
+
+textbox { text-color: @fg; }
+
+/* --- Overlay (resultados rápidos) --- */
+overlay {
+    background-color: rgba(13,12,26,0.40);   /* de 0.9 -> 0.40 */
+    border: 1px;
+    border-color: @border;
+    border-radius: 4px;      /* de 6 -> 4 */
+}

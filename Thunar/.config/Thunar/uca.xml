@@ -21,6 +21,7 @@
 	<description>Abrir arquivos com micro</description>
 	<range>*</range>
 	<patterns>*</patterns>
+	<other-files/>
 	<text-files/>
 </action>
 <action>
