@@ -1,0 +1,106 @@
+/* Swordfish — leve e translúcido (roxo só nos detalhes) */
+
+/* ===== Base ===== */
+* {
+  font-family: "Fira Sans Semibold", "SpaceMono Nerd Font", feather, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;                         /* 1pt menor → sensação de leveza */
+  transition: background-color .25s ease, color .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+/* Barra */
+window#waybar {
+  background: rgba(13, 12, 26, 0.35);      /* mais transparente */
+  color: #c0caf5;
+  border: 1px solid rgba(138, 66, 244, 0.16); /* linha sutil em roxo */
+  box-shadow: 0 0 10px rgba(138, 66, 244, 0.10); /* brilho bem leve */
+}
+
+/* Grupos (esq/centro/dir) */
+.modules-left,
+.modules-center,
+.modules-right {
+  background: rgba(0, 0, 8, 0.30);         /* ainda mais leve */
+  margin: 6px 10px;
+  padding: 0 6px;
+  border-radius: 6px;                       /* menos arredondado */
+  border: 1px solid rgba(79, 70, 181, 0.18);
+}
+.modules-left { padding: 0; }
+.modules-center { padding: 0 10px; }
+
+
+
+/* Hover mais etéreo */
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#custom-media:hover,
+#tray:hover,
+#mode:hover,
+#idle_inhibitor:hover,
+#scratchpad:hover,
+#power-profiles-daemon:hover,
+#language:hover,
+#mpd:hover {
+  background: rgba(13, 12, 26, 0.55);       /* sobe um pouco o alpha no hover */
+  border-color: rgba(79, 70, 181, 0.28);
+  box-shadow: inset 0 -2px 0 0 rgba(138, 66, 244, 0.28);
+}
+
+/* Workspaces — tipografia leve, realce sutil */
+#workspaces button {
+  background: transparent;
+  font-family: "SpaceMono Nerd Font", feather, "Fira Sans Semibold", sans-serif;
+  font-weight: 600;                         /* menos pesado que 900 */
+  font-size: 12pt;
+  color: #c0caf5;
+  border: none;
+  border-radius: 6px;
+  padding: 0 8px;
+}
+#workspaces button.active {
+  background: rgba(19, 19, 29, 0.50);       /* mais ar */
+  box-shadow: inset 0 -2px 0 0 rgba(138, 66, 244, 0.45);
+}
+#workspaces button:hover {
+  background: rgba(17, 17, 27, 0.55);
+  color: #d7defb;
+}
+
+/* Ícone Arch — toque ciano só no hover */
+#custom-arch {
+  margin-left: 5px;
+  padding: 0 10px;
+  font-size: 24px;
+  transition: color .25s, text-shadow .25s;
+}
+#custom-arch:hover {
+  color: #1793d1;
+  text-shadow: 0 0 5px rgba(23, 147, 209, 0.28);
+}
+
+/* Estados de alerta (discretos) */
+#temperature.warning, #battery.warning {
+  background: rgba(242, 93, 148, 0.12);
+  border-color: rgba(242, 93, 148, 0.38);
+}
+#temperature.critical, #battery.critical {
+  background: rgba(242, 93, 148, 0.22);
+  border-color: rgba(242, 93, 148, 0.55);
+}
+
+/* Tray limpo */
+#tray {
+  padding: 0 6px;
+  background: transparent;
+}
+
+
+

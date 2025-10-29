@@ -1,0 +1,106 @@
+/**
+ * Swordfish Mini — Rofi (Corner Menu) • fundo translúcido consistente
+ * Abre no canto sup. esquerdo, simples e legível
+ */
+
+* {
+  fg:         #e8e8ec;
+  accent:     #8a42f4;
+  accent-alt: #00a6c9;
+  border:     #4f46b5;
+  font: "JetBrains Mono Nerd Font 10";
+}
+
+/* Janela */
+window {
+  /* use “background” se não quiser depender de compositor (“fake transparency”) */
+  /* escolha UMA das linhas abaixo: */
+  transparency: "background";            /* <- estável em qualquer setup */
+  /* transparency: "real"; */            /* <- se usar compositor e quiser “real” */
+
+  location: north west;
+  anchor:   north west;
+  x-offset: 10px;
+  y-offset: 10px;
+  width: 22%;
+
+  border: 1px solid;
+  border-color: @border;
+  border-radius: 6px;
+
+  /* vidro leve (reduza para 0.55 se quiser mais translúcido) */
+  background-color: rgba(13,12,26,0.65);
+  padding: 6px;
+}
+
+/* Zera o fundo dos containers internos para evitar “caixas brancas” */
+mainbox,
+message,
+listview,
+mode-switcher,
+inputbar,
+element,
+element-text,
+scrollbar,
+textbox,
+prompt,
+entry {
+  background-color: transparent;
+  text-color: @fg;
+  border: 0;
+}
+
+/* Input */
+inputbar {
+  border: 1px;
+  border-color: @border;
+  border-radius: 4px;
+  padding: 3px 6px;
+  spacing: 6px;
+}
+
+prompt {
+  content: ">";
+  text-color: @accent-alt;
+  font: "JetBrains Mono Nerd Font Bold 10";
+  padding: 1px 4px 1px 2px;
+}
+
+entry {
+  placeholder: "search...";
+  placeholder-color: @accent;
+  cursor-color: @accent;
+  cursor-width: 2px;
+  blink: true;
+}
+
+/* Lista */
+listview {
+  columns: 1;
+  lines: 8;
+  spacing: 3px;
+  scrollbar: false;
+  fixed-height: false;
+  padding: 2px 0;
+}
+
+element {
+  padding: 3px 6px;
+}
+
+element selected {
+  background-color: rgba(138,66,244,0.18); /* véu roxo sutil */
+  text-color: @fg;
+  border: 0 0 0 2px;
+  border-color: @accent;
+  border-radius: 3px;
+}
+
+/* Mensagens/overlay (também translúcidos) */
+message, overlay {
+  background-color: rgba(13,12,26,0.40);
+  border: 1px;
+  border-color: @border;
+  border-radius: 4px;
+  padding: 4px;
+}

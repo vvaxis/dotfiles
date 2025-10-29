@@ -2,3 +2,7 @@
 *.swp
 *.tmp
 .cache/
+
+# Ignorar informações de auth do google
+calcurse/.config/calcurse/caldav/
+micro/.config/micro/backups/
