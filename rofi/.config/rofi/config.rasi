@@ -16,3 +16,5 @@
 //@theme "swordfish-console"
 
 //@theme "swordfish-glass"
+
+//@import "~/.cache/wal/colors-rofi-dark"

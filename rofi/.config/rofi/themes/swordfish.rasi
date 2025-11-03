@@ -13,7 +13,7 @@
     success:       #35c759;   /* sucesso */
 
     /* --- Fontes e dimensões (um pouco menos "gordo") --- */
-    font: "JetBrains Mono Nerd Font 10";
+    font: "JetBrains Mono Nerd Font 12";
     text-color: @fg;
     background-color: @bg;
     border-color: @border;
@@ -33,14 +33,14 @@
 
 /* --- Janela principal (mais "glass") --- */
 window {
-    width: 34%;                           /* de 38% -> 34% */
+    width: 42%;                           /* de 38% -> 34% */
     location: center;
     border: 1px solid;                    /* de 2px -> 1px */
     border-color: @border;
     border-radius: 6px;                   /* de 12px -> 6px */
     transparency: "real";                 /* mover para cá */
     background-color: rgba(13, 12, 26, 0.45); /* de 0.94 -> 0.45 (vidro) */
-    padding: 8px;                         /* de 12px -> 8px */
+    padding: 10px;                         /* de 12px -> 8px */
 }
 
 /* --- Barra de entrada (console vibe, mais limpa) --- */
@@ -77,9 +77,9 @@ entry {
 /* --- Lista de elementos --- */
 listview {
     columns: 1;
-    lines: 9;             /* de 8 -> 9 (melhor aproveitamento com fonte 10) */
+    lines: 7;             /* de 8 -> 9 (melhor aproveitamento com fonte 10) */
     spacing: 3px;         /* de 4px -> 3px */
-    scrollbar: true;
+    scrollbar: false;
     fixed-height: false;
     border: 0px;
 }
@@ -103,14 +103,6 @@ element selected {
     border: 0px 0px 0px 2px;                 /* barra esquerda fina */
     border-color: @accent;
     border-radius: 2px;                      /* de 6px -> 2px */
-}
-
-/* --- Scrollbar --- */
-scrollbar {
-    handle-width: 6px;
-    handle-color: @accent-alt;
-    background-color: rgba(13,12,26,0.15);   /* de 0.4 -> 0.15 */
-    handle-rounded-corners: true;
 }
 
 /* --- Modo switcher (botões) --- */
