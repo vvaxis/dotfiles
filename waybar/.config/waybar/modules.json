@@ -119,6 +119,14 @@
         "on-click": "networkmanager_dmenu",    // abre o menu (rofi/wofi)
         "on-click-right": "nm-connection-editor",    // abre GUI avançada
         },
+
+     "hyprland/language": {
+         "format": "{}",
+         "format-en": "US",
+         "format-pt": "BR",
+         "format-pt-br": "BR", // Caso o hyprland retorne pt-br minúsculo
+         "on-click": "~/.local/bin/layout_toggle.sh" // Alterna rápido
+     },
     
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
