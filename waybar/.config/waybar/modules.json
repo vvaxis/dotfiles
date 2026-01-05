@@ -4,11 +4,11 @@
          "active-only": false,
          "all-outputs": true,
          "warp-on-scroll": false,
-         "format": "{name}: {icon}",
+         "format": "{name} {icon}",
          "format-icons": {
              "urgent": "",
-             "active": "",
-             "default": ""
+             "active": "✦",
+             "default": ""
          },
          
          "persistent-workspaces":{
@@ -116,6 +116,7 @@
         "tooltip-format": "{ifname} via {gwaddr}  ",
         "format-linked": "{ifname} (No IP)  ",
         "format-disconnected": "Disconnected ⚠",
+        "format-disabled": "Disabled",
         "on-click": "networkmanager_dmenu",    // abre o menu (rofi/wofi)
         "on-click-right": "nm-connection-editor",    // abre GUI avançada
         },
@@ -164,7 +165,7 @@
 
     
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : "⏻",
 		"tooltip": false,
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
