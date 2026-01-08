@@ -6,3 +6,4 @@
 # Ignorar informações de auth do google
 calcurse/.config/calcurse/caldav/
 micro/.config/micro/backups/
+vdirsyncer/.config/vdirsyncer/credentials

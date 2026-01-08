@@ -14,6 +14,15 @@ compinit
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &)
+# (cat ~/.cache/wal/sequences &) # DON'T USE THIS FOR KITTY
+# Already in ~/.cache/wal/colors-kitty.conf
+
 # To add support for TTYs this line can be optionally added.
-source ~/.cache/wal/colors-tty.sh
+# Só carrega colors-tty.sh se estiver em um TTY real
+# [ "$TERM" = "linux" ] && source ~/.cache/wal/colors-tty.sh
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/vvaxis/.lmstudio/bin"
+# End of LM Studio CLI section
+
+[ -f ~/.config/vdirsyncer/credentials ] && source ~/.config/vdirsyncer/credentials

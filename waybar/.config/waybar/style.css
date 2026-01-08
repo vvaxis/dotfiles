@@ -89,7 +89,7 @@ window#waybar.hidden {
   padding: 6px 18px;
   margin: 7px 3px;
   border-radius: 10px;
-  background-color: rgba(30, 30, 46, 0.60);
+  background-color: rgba(30, 30, 46, 0);
   color: #c0caf5;
   font-family: "SpaceMono Nerd Font", "JetBrainsMono Nerd Font", sans-serif;
   font-weight: 600;
@@ -127,6 +127,11 @@ button:hover {
   text-shadow: none;
   background: rgba(30, 30, 46, 0.90);
   transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Window Title - Active Application */
+#window {
+    font-weight: 800;
 }
 
 /* Módulos individuais */
@@ -207,10 +212,35 @@ button:hover {
 }
 
 #custom-power {
-    color: @foreground;
-    font-size: 15px;
-    font-weight: 800;
+   color: @foreground;
+   font-size: 15px;
+   font-weight: 800;
 }
+
+#custom-media {
+  background: linear-gradient(135deg, alpha(@color4, 0.80) 0%, alpha(@color5, 0.85) 100%);
+   color: @background;
+   margin: 7px 3px;
+   padding: 6px 12px;
+   border-radius: 100px;
+   font-weight: 500;
+}
+
+#custom-media.Paused {
+    background: alpha(@background, 0.50);
+    color: @foreground;
+}
+
+#custom-cava {
+    background: transparent;
+    color: @color6;
+    margin: 2px 2px;
+    padding: 5px 5px;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
 
 /* Módulos gerais */
 #memory,
@@ -228,13 +258,13 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #language {
-  border-radius: 4px;
-  margin: 3px 3px;
+  border-radius: 10px;
+  margin: 7px 3px;
   padding: 6px 12px;
-  border: 1px solid alpha(@color8, 0.15);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  transition: all .25s ease;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 /* Hover unificado */
 #clock:hover,
@@ -264,7 +294,7 @@ button:hover {
 
 /* Tray */
 #tray {
-  background: alpha(@background, 0.60);
+  background: transparent;
   padding: 2px 8px;
 }
 

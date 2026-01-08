@@ -20,14 +20,14 @@
 
     
  "modules-center": [
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "hyprland/window",
   ],
     
 
     "modules-right": [
+    	"custom/cava",
      	"custom/media",
-        "mpd",
-        "idle_inhibitor",
         "pulseaudio",    
         "tray",
         "clock",

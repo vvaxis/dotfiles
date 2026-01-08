@@ -1,0 +1,30 @@
+[default]
+default_calendar = joaovitoralmeidaml@gmail.com
+highlight_event_days = true
+
+[calendars]
+
+[[joaovitoralmeidaml@gmail.com]]
+path = ~/.calendars/joaovitoralmeidaml@gmail.com/
+type = calendar
+color = brown
+
+[[FGV]]
+path = ~/.calendars/c09ce20cdd9401fe0e03304806465edb93448c91c7fca1d0e3babb08ba3c1b29@group.calendar.google.com/
+type = calendar
+color = light blue
+
+[[Livres]]
+path = ~/.calendars/85e5faf8e50f6d964f91eee030866a6f24dd942b611de5193c6e57e42a972c79@group.calendar.google.com/
+type = calendar
+color = light magenta
+
+[[MDB]]
+path = ~/.calendars/0bf32cead2247358c4b303cc2fe602159173413ec80feb0c396a5b0f34efd907@group.calendar.google.com/
+type = calendar
+color = light green
+
+[[FJE + CONAJE]]
+path = ~/.calendars/5b04c25cc6c88c3830b23df741432501822bdec31061c21ba9244232dc6eedff@group.calendar.google.com/
+type = calendar
+color = dark blue

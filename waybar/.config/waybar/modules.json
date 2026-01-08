@@ -10,12 +10,24 @@
              "active": "✦",
              "default": ""
          },
-         
-         "persistent-workspaces":{
-         	"*": [1,2,3,4,5]
-         }
      },
 
+"hyprland/window": {
+    "format": "{}",
+    "max-length": 20,
+    "separate-outputs": true,
+    "rewrite": {
+        "(.*) — LibreWolf": "󰈹   $1",
+        "LibreWolf": "󰈹   LibreWolf",
+        "(.*)Discord(.*)": "󰙯   $1",
+        "Spotify Premium": "   Spotify",
+        "Steam": "󰓓   Steam",
+        "": " 󰣇 ",
+        "micro (.*)": "󰦨  $1",
+        "WhatsApp": "   WhatsApp",
+        "(.*)WhatsApp Business": "  WhatsApp $1"
+    }
+},
     
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -89,7 +101,7 @@
 
     
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}% ",
         "tooltip": false
     },
 
@@ -105,7 +117,7 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""]
     },
     
     
@@ -123,24 +135,24 @@
 
      "hyprland/language": {
          "format": "{}",
-         "format-en": "US",
-         "format-pt": "BR",
+         "format-en": "󰌌   US",
+         "format-pt": "󰌌   BR",
          "format-pt-br": "BR", // Caso o hyprland retorne pt-br minúsculo
          "on-click": "~/.local/bin/layout_toggle.sh" // Alterna rápido
      },
     
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format": "{icon} {volume}%  {format_source}",
+        "format-bluetooth": "{icon}  {volume}%  {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-source": "  {volume}%",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
-            "headset": "",
+            "headset": "󰋎",
             "phone": "",
             "portable": "",
             "car": "",
@@ -156,13 +168,25 @@
         "max-length": 40,
         "format-icons": {
             "spotify": "",
-            "default": "🎜"
+            "default": "🎜",
+            "Playing": " ",
+            "Paused": " "
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}}: {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+        "on-click-right": "spotify"
+        // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
 
+	"custom/cava": {
+	    "exec": "~/.local/bin/cava.sh",
+	    "format": "{}",
+	    "tooltip": false
+	},
     
     "custom/power": {
         "format" : "⏻",
@@ -197,5 +221,5 @@
       "on-click": "swaync-client -t -sw",
       "on-click-right": "swaync-client -d -sw",
       "escape": true
-    },
+    }
 }
