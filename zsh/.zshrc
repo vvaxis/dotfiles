@@ -26,3 +26,6 @@ export PATH="$PATH:/home/vvaxis/.lmstudio/bin"
 # End of LM Studio CLI section
 
 [ -f ~/.config/vdirsyncer/credentials ] && source ~/.config/vdirsyncer/credentials
+
+# Created by `pipx` on 2026-01-27 06:11:52
+export PATH="$PATH:/home/vvaxis/.local/bin"
