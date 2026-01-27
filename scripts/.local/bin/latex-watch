@@ -1,0 +1,42 @@
+#!/bin/bash
+# latex-watch: compile LaTeX with tectonic and preview with sioyek
+# Usage: latex-watch <file.tex>
+
+set -euo pipefail
+
+if [ $# -lt 1 ]; then
+    echo "Usage: latex-watch <file.tex>" >&2
+    exit 1
+fi
+
+TEX_FILE="$1"
+if [ ! -f "$TEX_FILE" ]; then
+    echo "Error: file '$TEX_FILE' not found" >&2
+    exit 1
+fi
+
+PDF_FILE="${TEX_FILE%.tex}.pdf"
+
+cleanup() {
+    [ -n "${TECTONIC_PID:-}" ] && kill "$TECTONIC_PID" 2>/dev/null
+    [ -n "${SIOYEK_PID:-}" ] && kill "$SIOYEK_PID" 2>/dev/null
+    wait 2>/dev/null
+}
+trap cleanup EXIT INT TERM
+
+# Initial build so the PDF exists before opening the viewer
+tectonic -X build "$TEX_FILE" 2>&1
+
+# Start tectonic watch in background
+tectonic -X watch "$TEX_FILE" &
+TECTONIC_PID=$!
+
+# Give tectonic a moment to settle, then open the viewer
+sleep 1
+sioyek "$PDF_FILE" &
+SIOYEK_PID=$!
+
+echo "Watching $TEX_FILE (tectonic PID=$TECTONIC_PID, sioyek PID=$SIOYEK_PID)"
+echo "Press Ctrl+C to stop."
+
+wait "$TECTONIC_PID"
