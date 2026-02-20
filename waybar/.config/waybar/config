@@ -14,7 +14,8 @@
         "memory",
 		"cpu",
         "network",
-        "hyprland/language"
+        "hyprland/language",
+        "idle_inhibitor"
         
     ],
 
@@ -31,7 +32,7 @@
         "pulseaudio",    
         "tray",
         "clock",
-        "custom/swaync"
+        "custom/dunst"
     ],
 
     // Modules configuration
