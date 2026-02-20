@@ -1,0 +1,39 @@
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+# (cat ~/.cache/wal/sequences &) # DON'T USE THIS FOR KITTY
+# Already in ~/.cache/wal/colors-kitty.conf
+
+# To add support for TTYs this line can be optionally added.
+# Só carrega colors-tty.sh se estiver em um TTY real
+# [ "$TERM" = "linux" ] && source ~/.cache/wal/colors-tty.sh
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/vvaxis/.lmstudio/bin"
+# End of LM Studio CLI section
+
+[ -f ~/.config/vdirsyncer/credentials ] && source ~/.config/vdirsyncer/credentials
+
+# Created by `pipx` on 2026-01-27 06:11:52
+export PATH="$PATH:/home/vvaxis/.local/bin"
+
+zstyle ':completion:*:commands' rehash on
+
+export EDITOR=micro
+export VISUAL=micro
+
+# --- Zsh plugins ---
+
+# Extra completions (just needs fpath, loaded before compinit by grml)
+fpath=(/usr/share/zsh/site-functions $fpath)
+
+# Autosuggestions (fish-like greyed-out suggestions)
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+
+# History substring search (up/down arrows match typed prefix)
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# Syntax highlighting (must be sourced last)
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
