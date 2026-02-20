@@ -22,6 +22,9 @@ zstyle ':completion:*:commands' rehash on
 export EDITOR=micro
 export VISUAL=micro
 
+# --- Starship prompt ---
+eval "$(starship init zsh)"
+
 # --- Zsh plugins ---
 
 # Extra completions (just needs fpath, loaded before compinit by grml)
