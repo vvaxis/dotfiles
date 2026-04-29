@@ -1,0 +1,326 @@
+/* ─── Swordfish GTK3 — Layer 2 (Screens) ─────────────────────────────
+ * Cyan interactive accent, functional color, no purple identity
+ * ──────────────────────────────────────────────────────────────────── */
+
+/* ─── Legacy GTK3 variables ───────────────────────────────────────── */
+@define-color theme_bg_color #0d0c1a;
+@define-color theme_fg_color #c0caf5;
+@define-color theme_base_color #0d0c1a;
+@define-color theme_text_color #c0caf5;
+@define-color theme_selected_bg_color #00d9e9;
+@define-color theme_selected_fg_color #0d0c1a;
+
+@define-color theme_unfocused_bg_color #0d0c1a;
+@define-color theme_unfocused_fg_color #c0caf5;
+@define-color theme_unfocused_base_color #0d0c1a;
+@define-color theme_unfocused_text_color #c0caf5;
+@define-color theme_unfocused_selected_bg_color #00d9e9;
+
+@define-color insensitive_bg_color #1a1530;
+@define-color insensitive_fg_color #585b70;
+@define-color borders #585b70;
+@define-color unfocused_borders #585b70;
+
+/* ─── libadwaita-compatible variables ────────────────────────────── */
+@define-color accent_bg_color #00d9e9;
+@define-color accent_fg_color #0d0c1a;
+@define-color accent_color #00d9e9;
+
+@define-color window_bg_color #0d0c1a;
+@define-color window_fg_color #c0caf5;
+
+@define-color view_bg_color #0d0c1a;
+@define-color view_fg_color #c0caf5;
+
+@define-color headerbar_bg_color #1a1530;
+@define-color headerbar_fg_color #c0caf5;
+@define-color headerbar_border_color #585b70;
+@define-color headerbar_backdrop_color #1a1530;
+@define-color headerbar_shade_color rgba(13, 12, 26, 0.36);
+
+@define-color sidebar_bg_color #1a1530;
+@define-color sidebar_fg_color #c0caf5;
+@define-color sidebar_backdrop_color #1a1530;
+@define-color sidebar_border_color #585b70;
+@define-color sidebar_shade_color rgba(13, 12, 26, 0.36);
+
+@define-color card_bg_color #1a1530;
+@define-color card_fg_color #c0caf5;
+@define-color card_shade_color rgba(13, 12, 26, 0.36);
+
+@define-color dialog_bg_color #1a1530;
+@define-color dialog_fg_color #c0caf5;
+
+@define-color popover_bg_color #1a1530;
+@define-color popover_fg_color #c0caf5;
+@define-color popover_shade_color rgba(13, 12, 26, 0.36);
+
+@define-color shade_color rgba(13, 12, 26, 0.36);
+@define-color scrollbar_outline_color rgba(13, 12, 26, 0.5);
+
+@define-color destructive_bg_color #f25d94;
+@define-color destructive_fg_color #c0caf5;
+@define-color destructive_color #f25d94;
+
+@define-color success_bg_color #05cb0d;
+@define-color success_fg_color #0d0c1a;
+@define-color success_color #05cb0d;
+
+@define-color warning_bg_color #d4a030;
+@define-color warning_fg_color #0d0c1a;
+@define-color warning_color #d4a030;
+
+@define-color error_bg_color #f25d94;
+@define-color error_fg_color #c0caf5;
+@define-color error_color #f25d94;
+
+/* ═══════════════════════════════════════════════════════════════════
+ * Widget overrides
+ * ═══════════════════════════════════════════════════════════════════ */
+
+/* ─── Base surfaces ───────────────────────────────────────────────── */
+window, .background {
+    background-color: #0d0c1a;
+    color: #c0caf5;
+}
+
+treeview, treeview.view, list, listbox, .view {
+    background-color: #0d0c1a;
+    color: #c0caf5;
+}
+
+/* ─── Elevated surfaces ───────────────────────────────────────────── */
+toolbar, .toolbar {
+    background-color: #1a1530;
+    color: #c0caf5;
+}
+
+menubar, .menubar {
+    background-color: #1a1530;
+    color: #c0caf5;
+}
+
+menu, .menu {
+    background-color: #1a1530;
+    color: #c0caf5;
+}
+
+.sidebar, .sidebar .view {
+    background-color: #1a1530;
+    color: #c0caf5;
+}
+
+statusbar {
+    background-color: #0d0c1a;
+    color: #585b70;
+}
+
+/* ─── Headerbar — cyan bottom stripe (active display indicator) ──── */
+.titlebar, headerbar {
+    background-color: #1a1530;
+    color: #c0caf5;
+    border-bottom: 3px solid #00d9e9;
+}
+
+.titlebar:backdrop, headerbar:backdrop {
+    background-color: #1a1530;
+    color: #585b70;
+    border-bottom-color: #585b70;
+}
+
+.titlebar button:hover, headerbar button:hover {
+    background-color: rgba(88, 91, 112, 0.35);
+}
+
+/* ─── Buttons ─────────────────────────────────────────────────────── */
+button:hover {
+    background-color: rgba(88, 91, 112, 0.30);
+}
+
+button:active {
+    background-color: rgba(88, 91, 112, 0.45);
+    color: #c0caf5;
+}
+
+button:checked {
+    background-color: rgba(88, 91, 112, 0.35);
+    color: #c0caf5;
+}
+
+button.suggested-action {
+    background-color: #00d9e9;
+    color: #0d0c1a;
+}
+
+button.suggested-action:hover {
+    background-color: #3eb8a4;
+    color: #0d0c1a;
+}
+
+button.destructive-action {
+    background-color: #f25d94;
+    color: #c0caf5;
+}
+
+button.destructive-action:hover {
+    background-color: #d06a85;
+    color: #c0caf5;
+}
+
+/* ─── Entries — cyan focus ───────────────────────────────────────── */
+entry, .entry {
+    border-color: #585b70;
+}
+
+entry:focus, .entry:focus {
+    border-color: #00d9e9;
+}
+
+/* ─── Links — blue, visited lavender ─────────────────────────────── */
+*:link, .link {
+    color: #6898d0;
+}
+
+*:link:hover, .link:hover {
+    color: #3eb8a4;
+}
+
+*:visited {
+    color: #9a6dd7;
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────────────── */
+scrollbar slider, .scrollbar slider {
+    background-color: #585b70;
+    border-radius: 999px;
+}
+
+scrollbar slider:hover, .scrollbar slider:hover {
+    background-color: #c0caf5;
+}
+
+scrollbar slider:active, .scrollbar slider:active {
+    background-color: #c0caf5;
+}
+
+/* ─── Switches — green = systems nominal ──────────────────────────── */
+switch:checked {
+    background-color: #05cb0d;
+}
+
+switch:checked slider {
+    color: #0d0c1a;
+}
+
+/* ─── Checkbuttons & radiobuttons — green = confirmed ────────────── */
+checkbutton check:checked,
+radiobutton radio:checked,
+check:checked,
+radio:checked {
+    background-color: #05cb0d;
+    color: #0d0c1a;
+}
+
+/* ─── Progress bar — cyan = active data ──────────────────────────── */
+progressbar trough {
+    background-color: #1a1530;
+}
+
+progressbar progress {
+    background-color: #00d9e9;
+}
+
+/* ─── Scale (sliders) — cyan fill ────────────────────────────────── */
+scale trough {
+    background-color: #1a1530;
+}
+
+scale highlight {
+    background-color: #00d9e9;
+}
+
+scale slider {
+    background-color: #c0caf5;
+}
+
+/* ─── Selection — cyan tint ──────────────────────────────────────── */
+treeview:selected, treeview.view:selected,
+list row:selected, .view:selected,
+row:selected {
+    background-color: rgba(0, 217, 233, 0.25);
+    color: #c0caf5;
+}
+
+treeview:hover, treeview.view:hover,
+list row:hover, row:hover {
+    background-color: rgba(0, 217, 233, 0.10);
+}
+
+/* Text selection (entries, text views) — solid cyan for readability */
+selection, *:selected {
+    background-color: #00d9e9;
+    color: #0d0c1a;
+}
+
+/* ─── Separators ─────────────────────────────────────────────────── */
+separator {
+    background-color: #585b70;
+}
+
+/* ─── Tooltips ───────────────────────────────────────────────────── */
+tooltip, tooltip.background, .tooltip {
+    background-color: #1a1530;
+    color: #c0caf5;
+    border-color: #585b70;
+}
+
+/* ─── Backdrop ───────────────────────────────────────────────────── */
+window:backdrop, .background:backdrop {
+    color: #585b70;
+}
+
+/* ─── Tabs — cyan underline on active ────────────────────────────── */
+notebook tab:checked {
+    background-color: #1a1530;
+    color: #c0caf5;
+    border-bottom: 2px solid #00d9e9;
+}
+
+notebook tab {
+    background-color: #0d0c1a;
+    color: #585b70;
+}
+
+/* ─── Level bar (PavuControl volume meters) ──────────────────────── */
+levelbar block.filled {
+    background-color: #00d9e9;
+}
+
+levelbar block.empty {
+    background-color: #1a1530;
+}
+
+levelbar block.full {
+    background-color: #00d9e9;
+}
+
+levelbar block.high {
+    background-color: #00d9e9;
+}
+
+levelbar block.low {
+    background-color: #d4a030;
+}
+
+/* ─── GtkScale overrides (PavuControl sliders) ───────────────────── */
+scale trough highlight {
+    background-color: #00d9e9;
+}
+
+/* Nemo-specific styling lives in the Swordfish GTK theme:
+ * ~/dotfiles/themes/.themes/Swordfish/gtk-3.20/gtk.css */
+
+/* ─── Focus ring ─────────────────────────────────────────────────── */
+*:focus {
+    outline-color: #00d9e9;
+}

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Swordfish
+Comment=Swordfish cockpit theme — dark void with purple accents
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Swordfish
+IconTheme=Papirus-Dark
+CursorTheme=default
