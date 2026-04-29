@@ -1,13 +1,3 @@
-# Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
-# (cat ~/.cache/wal/sequences &) # DON'T USE THIS FOR KITTY
-# Already in ~/.cache/wal/colors-kitty.conf
-
-# To add support for TTYs this line can be optionally added.
-# Só carrega colors-tty.sh se estiver em um TTY real
-# [ "$TERM" = "linux" ] && source ~/.cache/wal/colors-tty.sh
-
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/vvaxis/.lmstudio/bin"
 # End of LM Studio CLI section
@@ -22,7 +12,34 @@ zstyle ':completion:*:commands' rehash on
 export EDITOR=micro
 export VISUAL=micro
 
+# --- Swordfish boot sequence (first terminal only) ---
+if [[ ! -f /tmp/.swordfish-booted-$UID ]]; then
+    touch /tmp/.swordfish-booted-$UID
+    fastfetch
+    printf '\n\033[38;2;138;66;244m>>> INITIALIZING DECK TERMINAL...\033[0m\n'
+    sleep 1
+    printf '\033[38;2;138;66;244m>>> SYSTEMS CHECK: \033[38;2;5;203;13mALL NOMINAL\033[0m\n'
+    sleep 1
+    printf '\033[38;2;0;217;233m>>> SWORDFISH II — TERMINAL ONLINE\033[0m\n'
+fi
+
+# --- Swordfish narrative hooks ---
+
+# Command not found
+command_not_found_handler() {
+    printf '\033[38;2;242;93;148m>>> UNKNOWN COMMAND: %s\033[0m\n' "$1" >&2
+    return 127
+}
+
+# SSH "docking"
+ssh() {
+    printf '\033[38;2;138;66;244m>>> DOCKING WITH %s...\033[0m\n' "${@: -1}"
+    command ssh "$@"
+    printf '\033[38;2;88;91;112m>>> UNDOCKED\033[0m\n'
+}
+
 # --- Starship prompt ---
+prompt off
 eval "$(starship init zsh)"
 
 # --- Zsh plugins ---
