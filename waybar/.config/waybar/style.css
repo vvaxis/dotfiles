@@ -1,315 +1,323 @@
-/* Swordfish Hybrid — Versão GTK3 100% Compatível */
+/* ═══════════════════════════════════════════════════════════════════════
+   SWORDFISH COCKPIT — Waybar GTK3 CSS
+   Sharp edges. Functional color. Density with hierarchy.
+   Hierarchy = weight + borders + colored accents. Never text opacity.
+   ═══════════════════════════════════════════════════════════════════════ */
 
-/* ===== Base ===== */
+/* ===== Reset ===== */
 * {
-  font-family: "JetBrainsMono Nerd Font", "Fira Sans Semibold", "SpaceMono Nerd Font", feather, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-family: "JetBrainsMono Nerd Font", monospace;
   font-size: 13px;
   border: none;
   border-radius: 0;
   min-height: 0;
-  margin: 0 4px;
-  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-/* Definir cores */
-@define-color background #0d0c1a;
-@define-color foreground #c0caf5;
-@define-color color0 #15141b;
-@define-color color1 #f25d94;
-@define-color color2 #a6e3a1;
-@define-color color3 #f9e2af;
-@define-color color4 #8a42f4;
-@define-color color5 #cba6f7;
-@define-color color6 #94e2d5;
-@define-color color7 #bac2de;
-@define-color color8 #585b70;
-@define-color color9 #f38ba8;
-@define-color color10 #a6e3a1;
-@define-color color11 #f9e2af;
-@define-color color12 #89b4fa;
-@define-color color13 #f5c2e7;
-@define-color color14 #94e2d5;
-@define-color color15 #a6adc8;
-
-/* Barra principal */
-window#waybar {
-  background: alpha(@background, 0.0);
-  color: @foreground;
-  border: none;
-  box-shadow: none;
   margin: 0;
   padding: 0;
-  transition-property: background-color;
-  transition-duration: 0.5s;
+  transition: all 0.15s ease;
+}
+
+/* Swordfish palette — managed by recolor.sh */
+@define-color background #0d0c1a;
+@define-color foreground #c0caf5;
+@define-color color0 #0d0c1a;
+@define-color color1 #f25d94;
+@define-color color2 #05cb0d;
+@define-color color3 #d4a030;
+@define-color color4 #8a42f4;
+@define-color color5 #9a6dd7;
+@define-color color6 #3eb8a4;
+@define-color color7 #c0caf5;
+@define-color color8 #585b70;
+@define-color color9 #d06a85;
+@define-color color10 #3eb8a4;
+@define-color color11 #d4a030;
+@define-color color12 #6898d0;
+@define-color color13 #d06a85;
+@define-color color14 #3eb8a4;
+@define-color color15 #585b70;
+
+
+/* ===== Bar — fully transparent ===== */
+window#waybar {
+  background: transparent;
+  color: @foreground;
 }
 
 window#waybar.hidden {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
-/* Grupos de módulos */
+
+/* ===== Module groups — sharp HUD panels ===== */
 .modules-left,
 .modules-center,
 .modules-right {
-    background: alpha(@background, 0.85);
-    margin: 4px 10px;
-    padding: 2px 8px;
-    border-radius: 16px;
-    border: 1px solid alpha(@color4, 0.40);
-    box-shadow:
-        0 2px 6px rgba(0, 0, 0, 0.35),
-        0 0 4px alpha(@color4, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+  background: alpha(@background, 0.82);
+  margin: 4px 6px;
+  padding: 0 4px;
+  border: 1px solid alpha(@color4, 0.25);
+  border-radius: 0;
 }
 
-.modules-left { 
-    padding: 2px 4px;
-    margin-left: 15px;
+.modules-left {
+  margin-left: 10px;
+  border-left: 2px solid alpha(@color4, 0.55);
 }
 
-.modules-center { 
-  padding: 2px 10px; 
+.modules-center {
+  padding: 0 6px;
 }
 
 .modules-right {
-  margin-right: 15px;
+  margin-right: 10px;
+  border-right: 2px solid alpha(@color4, 0.55);
 }
 
-/* Workspaces */
+
+/* ═══════════════════════════════════════════════════════════════════════
+   WORKSPACES
+   ═══════════════════════════════════════════════════════════════════════ */
+
 #workspaces {
   margin: 0;
+  margin-right: 5px;
   padding: 0;
-  background-color: transparent;
+  background: transparent;
 }
 
 #workspaces button {
   all: initial;
   min-width: 0;
-  box-shadow: inset 0 -3px transparent;
   padding: 6px 18px;
-  margin: 7px 3px;
-  border-radius: 10px;
-  background-color: rgba(30, 30, 46, 0);
-  color: #c0caf5;
-  font-family: "SpaceMono Nerd Font", "JetBrainsMono Nerd Font", sans-serif;
+  margin: 4px 1px;
+  border-radius: 0;
+  background: transparent;
+  color: @foreground;
+  font-family: "JetBrainsMono Nerd Font", monospace;
   font-weight: 600;
   font-size: 12pt;
   border: none;
-  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 2px solid transparent;
+  transition: all 0.1s ease;
 }
 
+/* Active workspace — purple tint + bottom accent + bold */
 #workspaces button.active {
-  color: @background;
-  background: linear-gradient(135deg, @color4 0%, alpha(@color5, 0.90) 100%);
-  background-color: @color4;
-  box-shadow: 0 2px 4px alpha(@color4, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  border: 1px solid alpha(@color4, 0.50);
-  transition: none;
+  color: @foreground;
+  background: alpha(@color4, 0.25);
+  border-bottom: 3px solid @color4;
+  font-weight: 800;
 }
-
 
 #workspaces button:hover {
-  background: rgba(30, 30, 46, 0.90);
-  color: #d7defb;
-  box-shadow: 0 1px 4px alpha(@color4, 0.25);
-  border: 1px solid alpha(@color4, 0.35);
+  color: @foreground;
+  background: alpha(@color4, 0.10);
+  border-bottom: 2px solid alpha(@color4, 0.40);
 }
 
 #workspaces button.urgent {
-  background: linear-gradient(135deg, alpha(@color1, 0.85) 0%, alpha(@color9, 0.90) 100%);
-  box-shadow: 0 2px 4px alpha(@color1, 0.50);
-  border: 1px solid alpha(@color1, 0.60);
-  color: #1e1e2e;
-}
-
-button:hover {
-  box-shadow: 0 1px 4px alpha(@color4, 0.25);
-  text-shadow: none;
-  background: rgba(30, 30, 46, 0.90);
-  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Window Title - Active Application */
-#window {
-    font-weight: 800;
-}
-
-/* Módulos individuais */
-#memory {
-  background: linear-gradient(135deg, alpha(@color3, 0.80) 0%, alpha(@color3, 0.90) 100%);
-  color: @background;
-}
-
-#backlight {
-  background: linear-gradient(135deg, alpha(@color3, 0.80) 0%, alpha(@color3, 0.90) 100%);
-  color: @background;
-}
-
-#wireplumber {
-  background: linear-gradient(135deg, alpha(@color5, 0.80) 0%, alpha(@color5, 0.90) 100%);
-  color: @background;
-}
-
-/* ===== NETWORK - Estados de conexão ===== */
-#network {
-  background: linear-gradient(135deg, alpha(@color6, 0.80) 0%, alpha(@color6, 0.90) 100%);
-  color: @background;
-  padding-right: 14px;
-}
-
-/* WiFi conectado - estado normal */
-#network.wifi {
-  background: linear-gradient(135deg, alpha(@color6, 0.80) 0%, alpha(@color6, 0.90) 100%);
-  color: @background;
-}
-
-/* Ethernet conectado */
-#network.ethernet {
-  background: linear-gradient(135deg, alpha(@color6, 0.80) 0%, alpha(@color6, 0.90) 100%);
-  color: @background;
-}
-
-/* WiFi/Internet desconectado - VERMELHO */
-#network.disconnected {
-  background: linear-gradient(135deg, alpha(@color1, 0.85) 0%, alpha(@color1, 0.95) 100%);
   color: @foreground;
-  border-color: alpha(@color1, 0.50);
-}
-
-/* WiFi desabilitado - LARANJA */
-#network.disabled {
-  background: linear-gradient(135deg, alpha(@color3, 0.85) 0%, alpha(@color3, 0.95) 100%);
-  color: @background;
-  border-color: alpha(@color3, 0.50);
-}
-
-/* ===== TEMPERATURE - Estados ===== */
-#temperature {
-  background: linear-gradient(135deg, alpha(@color2, 0.80) 0%, alpha(@color2, 0.90) 100%);
-  color: @background;
-}
-
-/* Temperatura em warning (80-89°C) - AMARELO */
-#temperature.warning {
-  background: linear-gradient(135deg, alpha(@color3, 0.85) 0%, alpha(@color3, 0.95) 100%);
-  color: @background;
-  border-color: alpha(@color3, 0.50);
-}
-
-/* Temperatura crítica (90°C+) - VERMELHO */
-#temperature.critical {
-  background: linear-gradient(135deg, alpha(@color1, 0.90) 0%, alpha(@color1, 0.98) 100%);
-  color: @foreground;
-  border-color: alpha(@color1, 0.70);
-  box-shadow: 0 1px 4px alpha(@color1, 0.40);
-}
-
-#clock {
-  background: linear-gradient(135deg, alpha(@color4, 0.80) 0%, alpha(@color5, 0.85) 100%);
-  color: @background;
-  font-family: "JetBrainsMono Nerd Font", monospace;
-  font-weight: 600;
-}
-
-#custom-power {
-   color: @foreground;
-   font-size: 15px;
-   font-weight: 800;
-}
-
-#custom-media {
-  background: linear-gradient(135deg, alpha(@color4, 0.80) 0%, alpha(@color5, 0.85) 100%);
-   color: @background;
-   margin: 7px 3px;
-   padding: 6px 12px;
-   border-radius: 100px;
-   font-weight: 500;
-}
-
-#custom-media.Paused {
-    background: alpha(@background, 0.50);
-    color: @foreground;
-}
-
-#custom-cava {
-    background: transparent;
-    color: @color6;
-    margin: 2px 2px;
-    padding: 5px 5px;
-    font-family: monospace;
-    font-size: 11px;
-    letter-spacing: 2px;
+  background: alpha(@color1, 0.20);
+  border-bottom: 3px solid @color1;
 }
 
 
-/* Módulos gerais */
+/* ═══════════════════════════════════════════════════════════════════════
+   MODULES — all text opaque. Hierarchy via weight, borders, color.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Default module style — readable, plain */
 #memory,
-#custom-power,
-#backlight,
-#wireplumber,
+#cpu,
+#temperature,
 #network,
 #clock,
 #tray,
-#cpu,
-#disk,
-#temperature,
-#mpd,
 #idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#language {
-  border-radius: 10px;
-  margin: 7px 3px;
-  padding: 6px 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+#language,
+#custom-power,
+#wireplumber,
+#bluetooth,
+#pulseaudio {
+  padding: 4px 10px;
+  margin: 4px 1px;
+  color: @foreground;
+  background: transparent;
+  font-weight: 400;
+  border-radius: 0;
 }
 
 
-/* Hover unificado */
+/* ===== Primary instruments — stand out via weight + accents ===== */
+
+/* Window title — bold, always visible */
+#window {
+  font-weight: 700;
+  color: @foreground;
+}
+
+/* Clock — primary readout. Cyan = live data speaking to the pilot. */
+#clock {
+  color: @color6;
+  font-weight: 700;
+  border-bottom: 2px solid @color4;
+}
+
+/* Power button — isolated, larger */
+#custom-power {
+  color: @color4;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 4px 12px;
+  margin-right: 6px;
+  border-right: 1px solid alpha(@color4, 0.30);
+}
+
+
+
+/* ===== Media player ===== */
+
+#custom-media {
+  color: @foreground;
+  margin: 4px 2px;
+  padding: 4px 10px;
+  font-weight: 500;
+  border-radius: 0;
+  border-left: 2px solid @color8;
+}
+
+#custom-media.Playing {
+  font-weight: 700;
+  border-left: 2px solid @color4;
+}
+
+#custom-media.Paused {
+  color: @color8;
+  border-left: 2px solid @color8;
+}
+
+
+/* ===== Utilities group — language + idle, separated from comms ===== */
+
+#language {
+  border-left: 1px solid alpha(@color4, 0.30);
+  margin-left: 4px;
+  padding-left: 14px;
+}
+
+
+/* ===== Cava visualizer — cyan, the living HUD element ===== */
+
+#custom-cava {
+  background: transparent;
+  color: @color6;
+  padding: 4px 4px;
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+
+/* ===== Dunst notification indicator ===== */
+
+#custom-dunst {
+  padding: 4px 8px;
+  color: @foreground;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   STATE COLORS — functional, not decorative.
+   Green = nominal (systems go). Amber = caution. Pink = alert.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* --- Network: green = connected, pink = down --- */
+#network {
+  color: @color2;
+  border-left: 1px solid alpha(@color4, 0.30);
+  margin-left: 4px;
+  padding-left: 14px;
+}
+
+#network.disconnected {
+  color: @color1;
+  font-weight: 700;
+}
+
+#network.disabled {
+  color: @color8;
+}
+
+/* --- Temperature: white = normal, amber = warning, pink = critical --- */
+#temperature.warning {
+  color: @color3;
+  font-weight: 600;
+}
+
+#temperature.critical {
+  color: @color1;
+  font-weight: 700;
+}
+
+/* --- Memory: white = normal, amber = warning, pink = critical --- */
+#memory.warning {
+  color: @color3;
+  font-weight: 600;
+}
+
+#memory.critical {
+  color: @color1;
+  font-weight: 700;
+}
+
+/* --- Audio --- */
+#wireplumber.muted,
+#pulseaudio.muted {
+  color: @color8;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   HOVER — subtle purple tint reveal
+   ═══════════════════════════════════════════════════════════════════════ */
+
 #clock:hover,
-#battery:hover,
 #cpu:hover,
 #memory:hover,
-#disk:hover,
 #temperature:hover,
-#backlight:hover,
 #network:hover,
 #wireplumber:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
 #custom-media:hover,
 #tray:hover,
-#mode:hover,
 #idle_inhibitor:hover,
-#scratchpad:hover,
-#power-profiles-daemon:hover,
 #language:hover,
-#mpd:hover,
-#custom-power:hover {
-  box-shadow:
-            0 2px 4px rgba(0, 0, 0, 0.25),
-            0 0 4px alpha(@color4, 0.20),
-            inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  border-color: alpha(@color4, 0.40);
+#custom-power:hover,
+#custom-dunst:hover {
+  background: alpha(@color4, 0.10);
 }
 
-/* Tray */
+
+/* ===== Tray ===== */
+
 #tray {
+  padding: 4px 6px;
   background: transparent;
-  padding: 2px 8px;
 }
 
-/* Tooltips */
+
+/* ===== Tooltips — sharp panel ===== */
+
 tooltip {
-    border-radius: 12px;
-    padding: 14px;
-    background-color: alpha(@background, 0.98);
-    border: 1px solid alpha(@color4, 0.35);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50), 0 0 6px alpha(@color4, 0.15);
+  border-radius: 0;
+  padding: 10px;
+  background-color: alpha(@background, 0.95);
+  border: 1px solid alpha(@color4, 0.25);
 }
 
 tooltip label {
-    padding: 4px;
-    background-color: transparent;
-    color: @foreground;
+  padding: 4px;
+  background: transparent;
+  color: @foreground;
 }
-

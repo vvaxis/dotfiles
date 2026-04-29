@@ -29,7 +29,8 @@
     "modules-right": [
     	"custom/cava",
      	"custom/media",
-        "pulseaudio",    
+        "wireplumber",
+        "bluetooth",
         "tray",
         "clock",
         "custom/dunst"
