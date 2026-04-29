@@ -1,0 +1,107 @@
+/**
+ * Swordfish — tema único Rofi
+ * Usado por: app launcher (drun), menus contextuais (dmenu via swordfish-menu)
+ * Menus contextuais recebem posição dinâmica via -theme-str no wrapper.
+ */
+
+* {
+    bg:         #0d0c1a;
+    fg:         #c0caf5;
+    accent:     #8a42f4;
+    accent-alt: #00d9e9;
+    border-c:   #4f46b5;
+    warning:    #f25d94;
+    success:    #05cb0d;
+
+    font: "JetBrains Mono Nerd Font 12";
+    text-color: @fg;
+    background-color: transparent;
+}
+
+window {
+    location: center;
+    width: 40%;
+    border: 1px solid;
+    border-color: @border-c;
+    border-radius: 0;
+    background-color: rgba(13, 12, 26, 0.92);
+    padding: 8px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: transparent;
+    border: 0px;
+    padding: 4px 6px;
+    spacing: 6px;
+}
+
+prompt {
+    content: ">>>";
+    text-color: @accent-alt;
+    font: "JetBrains Mono Nerd Font Bold 10";
+    vertical-align: 0.5;
+}
+
+entry {
+    placeholder: "";
+    background-color: transparent;
+    text-color: @fg;
+    cursor-color: @accent;
+    cursor-width: 2px;
+    blink: true;
+}
+
+listview {
+    columns: 1;
+    lines: 10;
+    spacing: 2px;
+    scrollbar: false;
+    fixed-height: false;
+    border: 0px;
+    background-color: transparent;
+}
+
+element {
+    background-color: transparent;
+    padding: 4px 8px;
+    border: 0px;
+}
+
+element-text {
+    text-color: @fg;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 20px;
+    padding: 0 8px 0 0;
+}
+
+element selected {
+    background-color: rgba(138, 66, 244, 0.18);
+    text-color: @fg;
+    border: 0px 0px 0px 2px;
+    border-color: @accent;
+}
+
+button {
+    background-color: transparent;
+    text-color: @accent-alt;
+    padding: 2px 5px;
+}
+
+button selected {
+    background-color: rgba(0, 217, 233, 0.18);
+    text-color: @fg;
+}
+
+message {
+    background-color: transparent;
+    border: 0px;
+    padding: 4px;
+}
+
+textbox {
+    text-color: @fg;
+}

@@ -1,0 +1,11 @@
+#!/bin/bash
+# swordfish-rofi-dmenu — rofi wrapper for tools that need a dmenu command
+# (e.g. networkmanager_dmenu). Positions the menu below the cursor.
+
+cursor_x=$(hyprctl cursorpos -j 2>/dev/null | jq -r '.x // 0')
+offset_x=$(( cursor_x - 130 ))
+[ "$offset_x" -lt 0 ] && offset_x=0
+
+exec rofi -dmenu "$@" \
+    -theme "swordfish-menu" \
+    -theme-str "window { location: north west; width: 300px; x-offset: ${offset_x}px; y-offset: 8px; }"

@@ -1,18 +1,7 @@
+@theme "swordfish-menu"
 
-// Temas
-	//@theme "/usr/share/rofi/themes/Monokai.rasi"
-	//@theme "/usr/share/rofi/themes/arthur.rasi"
-	//@theme "/usr/share/rofi/themes/sidebar.rasi"
-	//@theme "/usr/share/rofi/themes/material.rasi"
-	//@theme "/usr/share/rofi/themes/arthur.rasi"
-	//@theme "/usr/share/rofi/themes/purple.rasi"
-	@theme "swordfish"
-	//@theme "swordfish-console"
-	//@theme "swordfish-glass"
-	//@import "~/.cache/wal/colors-rofi-dark"
-
-	configuration {
-	    show-icons: true;
-	    icon-theme: "Papirus-Dark";
-	    drun-display-format: "{icon} {name}";
-	}
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    drun-display-format: "{icon} {name}";
+}
