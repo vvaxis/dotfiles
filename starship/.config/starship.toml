@@ -1,14 +1,21 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
+add_newline = false
+scan_timeout = 100
+
 format = """
 [](fg:#8a42f4)\
-$os\
+$username\
 [](fg:#8a42f4 bg:#6c35c4)\
-$directory\
+$hostname\
 [](fg:#6c35c4 bg:#4f46b5)\
+$os\
+[](fg:#4f46b5 bg:#3d2e8a)\
+$directory\
+[](fg:#3d2e8a bg:#332680)\
 $git_branch\
 $git_status\
-[](fg:#4f46b5)\
+[](fg:#332680)\
 $fill\
 $cmd_duration\
 $python\
@@ -19,27 +26,37 @@ $lua\
 $line_break\
 $character"""
 
+[username]
+show_always = true
+style_user = "bg:#8a42f4 fg:#0d0c1a bold"
+format = "[ $user ]($style)"
+
+[hostname]
+ssh_only = false
+style = "bg:#6c35c4 fg:#c0caf5 bold"
+format = "[ $hostname ]($style)"
+
 [os]
 disabled = false
-style = "bg:#8a42f4 fg:#0d0c1a bold"
+style = "bg:#4f46b5 fg:#c0caf5 bold"
 
 [os.symbols]
-Arch = "󰣇 "
+Arch = " 󰣇 "
 Linux = " "
 
 [directory]
-style = "bg:#6c35c4 fg:#e0e0e0 bold"
+style = "bg:#3d2e8a fg:#c0caf5 bold"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
 symbol = " "
-style = "bg:#4f46b5 fg:#e0e0e0"
+style = "bg:#332680 fg:#c0caf5"
 format = "[ $symbol$branch ]($style)"
 
 [git_status]
-style = "bg:#4f46b5 fg:#f9e2af"
+style = "bg:#332680 fg:#d4a031"
 format = "[$all_status$ahead_behind ]($style)"
 
 [fill]
@@ -51,30 +68,30 @@ style = "fg:#585b70"
 format = "[$duration ]($style)"
 
 [character]
-success_symbol = "[>>>](bold #94e2d5)"
+success_symbol = "[>>>](bold #3eb8a4)"
 error_symbol = "[>>>](bold #f25d94)"
 
 [python]
 symbol = " "
-style = "fg:#f9e2af"
+style = "fg:#d4a031"
 format = "[$symbol$version ]($style)"
 
 [nodejs]
 symbol = "󰎙 "
-style = "fg:#a6e3a1"
+style = "fg:#05cb0d"
 format = "[$symbol$version ]($style)"
 
 [rust]
 symbol = "󱘗 "
-style = "fg:#f38ba8"
+style = "fg:#d06a85"
 format = "[$symbol$version ]($style)"
 
 [golang]
 symbol = "󰟓 "
-style = "fg:#94e2d5"
+style = "fg:#3eb8a4"
 format = "[$symbol$version ]($style)"
 
 [lua]
 symbol = "󰢱 "
-style = "fg:#89b4fa"
+style = "fg:#6898d0"
 format = "[$symbol$version ]($style)"

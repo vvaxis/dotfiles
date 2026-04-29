@@ -12,7 +12,7 @@
     frame_width = 1
     frame_color = "#8a42f4"
     separator_color = frame
-    corner_radius = 10
+    corner_radius = 0
     transparency = 15
     
     # Fonte e texto
@@ -45,19 +45,19 @@
     force_xwayland = false
 
 [urgency_low]
-    background = "#0d0c1a"
+    background = "#1a1530"
     foreground = "#c0caf5"
     frame_color = "#585b70"
     timeout = 5
 
 [urgency_normal]
-    background = "#0d0c1a"
+    background = "#1a1530"
     foreground = "#c0caf5"
-    frame_color = "#8a42f4"
+    frame_color = "#05cb0d"
     timeout = 10
 
 [urgency_critical]
-    background = "#0d0c1a"
+    background = "#1a1530"
     foreground = "#f25d94"
     frame_color = "#f25d94"
     timeout = 0
