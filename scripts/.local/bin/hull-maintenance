@@ -1,0 +1,8 @@
+#!/bin/bash
+# Swordfish narrative pacman hook — shows update count after transaction
+
+count=0
+while read -r line; do
+    count=$((count + 1))
+done
+printf '\033[38;2;138;66;244m>>> HULL MAINTENANCE COMPLETE. \033[38;2;5;203;13m%d SYSTEMS UPDATED.\033[0m\n' "$count"
