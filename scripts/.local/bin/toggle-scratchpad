@@ -1,0 +1,11 @@
+#!/bin/bash
+# Toggle a scratchpad: launch app if not running, then toggle workspace.
+# Usage: toggle-scratchpad <workspace> <class> <launch-command...>
+
+ws="$1"; class="$2"; shift 2
+
+if ! hyprctl clients -j | grep -q "\"class\": \"$class\""; then
+    "$@" &
+    sleep 0.3
+fi
+hyprctl dispatch togglespecialworkspace "$ws"
