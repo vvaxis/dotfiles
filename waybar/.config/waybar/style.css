@@ -6,7 +6,7 @@
 
 /* ===== Reset ===== */
 * {
-  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-family: "DepartureMono Nerd Font", monospace;
   font-size: 13px;
   border: none;
   border-radius: 0;
@@ -93,7 +93,7 @@ window#waybar.hidden {
   border-radius: 0;
   background: transparent;
   color: @foreground;
-  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-family: "DepartureMono Nerd Font", monospace;
   font-weight: 600;
   font-size: 12pt;
   border: none;
@@ -212,7 +212,7 @@ window#waybar.hidden {
   background: transparent;
   color: @color6;
   padding: 4px 4px;
-  font-family: monospace;
+  font-family: "DepartureMono Nerd Font", monospace;
   font-size: 11px;
   letter-spacing: 2px;
 }
