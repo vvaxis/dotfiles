@@ -152,7 +152,7 @@
         "format-muted": "󰖁 ",
         "format-icons": ["󰕿", "󰖀", "󰕾"],
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "on-click-right": "pavucontrol",
+        "on-click-right": "toggle-scratchpad audio audio-scratchpad kitty --class audio-scratchpad -o background_opacity=1 -e wiremix",
         "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
         "max-volume": 100,
