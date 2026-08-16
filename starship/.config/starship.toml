@@ -64,7 +64,7 @@ symbol = " "
 
 [cmd_duration]
 min_time = 2_000
-style = "fg:#585b70"
+style = "fg:#8f97b0"
 format = "[$duration ]($style)"
 
 [character]

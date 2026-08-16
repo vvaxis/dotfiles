@@ -27,14 +27,14 @@
 @define-color color5 #9a6dd7;
 @define-color color6 #3eb8a4;
 @define-color color7 #c0caf5;
-@define-color color8 #585b70;
+@define-color color8 #8f97b0;
 @define-color color9 #d06a85;
 @define-color color10 #3eb8a4;
 @define-color color11 #d4a030;
 @define-color color12 #6898d0;
 @define-color color13 #d06a85;
 @define-color color14 #3eb8a4;
-@define-color color15 #585b70;
+@define-color color15 #8f97b0;
 
 
 /* ===== Bar — fully transparent ===== */
@@ -53,7 +53,7 @@ window#waybar.hidden {
 .modules-center,
 .modules-right {
   background: @background;
-  margin: 3px 5px;
+  margin: 5px 5px 3px 5px;
   padding: 0 3px;
   border: none;
   border-radius: 0;

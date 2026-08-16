@@ -3818,7 +3818,7 @@ scrollbar {
     scrollbar slider:hover:active {
       background-color: #d6b2f8; }
     scrollbar slider:backdrop {
-      background-color: #585b70; }
+      background-color: #8f97b0; }
     scrollbar slider:disabled {
       background-color: transparent; }
   scrollbar.fine-tune slider {
@@ -3909,7 +3909,7 @@ scrollbar {
       box-shadow: inset 0 1px rgba(255, 255, 255, 0);
       text-shadow: none;
       -gtk-icon-shadow: none;
-      color: #585b70; }
+      color: #8f97b0; }
       scrollbar button:backdrop:disabled {
         border-color: transparent;
         background-color: transparent;
@@ -5082,7 +5082,7 @@ button.raven-trigger {
       color: #c0caf5; }
     .raven .powerstrip button.image-button:active {
       transition: 170ms ease all;
-      background: #585b70;
+      background: #8f97b0;
       color: #c0caf5; }
     .raven .powerstrip button.image-button:first-child {
       background: rgba(113, 200, 208, 0.7); }
@@ -5248,12 +5248,12 @@ calendar.raven-calendar {
       .budgie-session-dialog .linked.horizontal > button.destructive-action:active, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:active, .budgie-run-dialog .linked.horizontal > button.destructive-action:active, .budgie-session-dialog .linked.horizontal > button.destructive-action:checked, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:checked, .budgie-run-dialog .linked.horizontal > button.destructive-action:checked {
         background-color: rgba(160, 74, 240, 0.9); }
   .budgie-session-dialog entry, .budgie-polkit-dialog entry, .budgie-run-dialog entry {
-    background-color: #585b70;
+    background-color: #8f97b0;
     color: #c0caf5; }
     .budgie-session-dialog entry:focus, .budgie-polkit-dialog entry:focus, .budgie-run-dialog entry:focus {
-      background-color: #585b70; }
+      background-color: #8f97b0; }
     .budgie-session-dialog entry:backdrop, .budgie-polkit-dialog entry:backdrop, .budgie-run-dialog entry:backdrop {
-      background-color: #585b70; }
+      background-color: #8f97b0; }
 
 .budgie-polkit-dialog .message {
   color: rgba(247, 245, 242, 0.7); }

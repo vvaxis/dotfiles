@@ -16,11 +16,11 @@
 /* base background color of disabled widgets */
 @define-color insensitive_bg_color #25222d;
 /* text foreground color of disabled widgets */
-@define-color insensitive_fg_color #585b70;
+@define-color insensitive_fg_color #8f97b0;
 /* disabled text widgets and the like base background color */
 @define-color insensitive_base_color #1a1530;
 /* widget text/foreground color on backdrop windows */
-@define-color theme_unfocused_fg_color #585b70;
+@define-color theme_unfocused_fg_color #8f97b0;
 /* text color for entries, views and content in general on backdrop windows */
 @define-color theme_unfocused_text_color #c0caf5;
 /* widget base background color on backdrop windows */
@@ -45,7 +45,7 @@
 @define-color base_color #1a1530;
 @define-color selected_bg_color #47d6e3;
 @define-color selected_fg_color #010204;
-@define-color unfocused_fg_color #585b70;
+@define-color unfocused_fg_color #8f97b0;
 @define-color unfocused_text_color #c0caf5;
 @define-color unfocused_bg_color #010204;
 @define-color unfocused_base_color #010204;
@@ -54,7 +54,7 @@
 /* these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
 @define-color wm_title shade(#c0caf5, 1.8);
-@define-color wm_unfocused_title #585b70;
+@define-color wm_unfocused_title #8f97b0;
 @define-color wm_highlight rgba(0, 0, 0, 0);
 @define-color wm_borders_edge rgba(255, 255, 255, 0.1);
 @define-color wm_bg_a shade(#010204, 1.2);
@@ -202,7 +202,7 @@ read if you used those and something break with a version upgrade you're on your
   color: #c0caf5;
   background-color: #010204; }
   .background:backdrop {
-    color: #585b70;
+    color: #8f97b0;
     background-color: #010204;
     text-shadow: none;
     -gtk-icon-shadow: none; }
@@ -232,7 +232,7 @@ selection {
     color: #c0caf5;
     background-color: #010204; }
   .gtkstyle-fallback:disabled {
-    color: #585b70;
+    color: #8f97b0;
     background-color: #25222d; }
   .gtkstyle-fallback:selected {
     color: #c0caf5;
@@ -281,16 +281,16 @@ label {
   label.separator {
     color: #c0caf5; }
     label.separator:backdrop {
-      color: #585b70; }
+      color: #8f97b0; }
   label selection {
     background-color: #47d6e3;
     color: #c0caf5; }
   label:disabled {
-    color: #585b70; }
+    color: #8f97b0; }
     label:disabled:backdrop {
       color: #3e4055; }
   label:backdrop {
-    color: #585b70; }
+    color: #8f97b0; }
 
 .dim-label, label.separator, .titlebar:not(headerbar) .subtitle,
 headerbar .subtitle {
@@ -482,7 +482,7 @@ row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled) {
   color: #c0caf5;
   border-color: transparent; }
   row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop {
-    color: #585b70; }
+    color: #8f97b0; }
 button.osd {
   min-width: 24px;
   min-height: 32px;
@@ -1055,7 +1055,7 @@ popover.background radiobutton,
   modelbutton.flat:hover, popover.background checkbutton:hover,
   popover.background radiobutton:hover,
   .menuitem.button.flat:hover {
-    background-color: #585b70; }
+    background-color: #8f97b0; }
   modelbutton.flat check:last-child, popover.background checkbutton check:last-child,
   popover.background radiobutton check:last-child,
   modelbutton.flat radio:last-child,
@@ -1730,7 +1730,7 @@ spinbutton:not(.vertical), entry {
     border-color: #47d6e3; }
   spinbutton:disabled:not(.vertical),
   entry:disabled {
-    color: #585b70;
+    color: #8f97b0;
     border-color: rgba(1, 2, 4, 0.9);
     background-color: #25222d;
     box-shadow: none; }
@@ -2915,7 +2915,7 @@ menubar,
       box-shadow: inset 0 -3px #47d6e3; }
     menubar > menuitem:disabled,
     .menubar > menuitem:disabled {
-      color: #585b70;
+      color: #8f97b0;
       box-shadow: none; }
 
 menu, .menu, .context-menu {
@@ -2939,11 +2939,11 @@ menu, .menu, .context-menu {
       color: #c0caf5;
       background-color: #47d6e3; }
     menu menuitem:disabled, .menu menuitem:disabled, .context-menu menuitem:disabled {
-      color: #585b70; }
+      color: #8f97b0; }
       menu menuitem:disabled:backdrop, .menu menuitem:disabled:backdrop, .context-menu menuitem:disabled:backdrop {
         color: #3e4055; }
     menu menuitem:backdrop, menu menuitem:backdrop:hover, .menu menuitem:backdrop, .menu menuitem:backdrop:hover, .context-menu menuitem:backdrop, .context-menu menuitem:backdrop:hover {
-      color: #585b70;
+      color: #8f97b0;
       background-color: transparent; }
     menu menuitem arrow, .menu menuitem arrow, .context-menu menuitem arrow {
       min-height: 16px;
@@ -3132,7 +3132,7 @@ notebook > header {
     min-width: 30px;
     padding: 3px 12px;
     outline-offset: -5px;
-    color: #585b70;
+    color: #8f97b0;
     font-weight: bold;
     border-width: 1px;
     border-color: transparent; }
@@ -3154,7 +3154,7 @@ notebook > header {
         notebook > header tab:checked.reorderable-page:hover {
           background-color: rgba(33, 30, 41, 0.7); }
     notebook > header tab:backdrop:checked {
-      color: #585b70; }
+      color: #8f97b0; }
       notebook > header tab:backdrop:checked.reorderable-page {
         border-color: rgba(1, 2, 4, 0.91);
         background-color: #010204; }
@@ -3818,7 +3818,7 @@ scrollbar {
     scrollbar slider:hover:active {
       background-color: #d6b2f8; }
     scrollbar slider:backdrop {
-      background-color: #585b70; }
+      background-color: #8f97b0; }
     scrollbar slider:disabled {
       background-color: transparent; }
   scrollbar.fine-tune slider {
@@ -3909,7 +3909,7 @@ scrollbar {
       box-shadow: inset 0 1px rgba(255, 255, 255, 0);
       text-shadow: none;
       -gtk-icon-shadow: none;
-      color: #585b70; }
+      color: #8f97b0; }
       scrollbar button:backdrop:disabled {
         border-color: transparent;
         background-color: transparent;
@@ -4110,7 +4110,7 @@ spinbutton:not(.vertical) {
   .osd spinbutton:not(.vertical) button:dir(rtl):first-child {
     border-radius: 0px 0 0 3px; }
 spinbutton.vertical:disabled {
-  color: #585b70; }
+  color: #8f97b0; }
 spinbutton.vertical:backdrop:disabled {
   color: #3e4055; }
 spinbutton.vertical:drop(active) {
@@ -4334,7 +4334,7 @@ treeview.view {
     border-left-color: #dbbef6;
     border-top-color: rgba(247, 245, 242, 0.1); }
   treeview.view:disabled {
-    color: #585b70; }
+    color: #8f97b0; }
     treeview.view:disabled:selected {
       color: #d5b2f6; }
       treeview.view:disabled:selected:backdrop {
@@ -5082,7 +5082,7 @@ button.raven-trigger {
       color: #c0caf5; }
     .raven .powerstrip button.image-button:active {
       transition: 170ms ease all;
-      background: #585b70;
+      background: #8f97b0;
       color: #c0caf5; }
     .raven .powerstrip button.image-button:first-child {
       background: rgba(113, 200, 208, 0.7); }
@@ -5248,12 +5248,12 @@ calendar.raven-calendar {
       .budgie-session-dialog .linked.horizontal > button.destructive-action:active, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:active, .budgie-run-dialog .linked.horizontal > button.destructive-action:active, .budgie-session-dialog .linked.horizontal > button.destructive-action:checked, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:checked, .budgie-run-dialog .linked.horizontal > button.destructive-action:checked {
         background-color: rgba(160, 74, 240, 0.9); }
   .budgie-session-dialog entry, .budgie-polkit-dialog entry, .budgie-run-dialog entry {
-    background-color: #585b70;
+    background-color: #8f97b0;
     color: #c0caf5; }
     .budgie-session-dialog entry:focus, .budgie-polkit-dialog entry:focus, .budgie-run-dialog entry:focus {
-      background-color: #585b70; }
+      background-color: #8f97b0; }
     .budgie-session-dialog entry:backdrop, .budgie-polkit-dialog entry:backdrop, .budgie-run-dialog entry:backdrop {
-      background-color: #585b70; }
+      background-color: #8f97b0; }
 
 .budgie-polkit-dialog .message {
   color: rgba(247, 245, 242, 0.7); }
@@ -5940,7 +5940,7 @@ UnityPanelWidget:backdrop,
 
 .unity-panel.menubar:backdrop,
 .unity-panel .menubar *:backdrop {
-  color: #585b70; }
+  color: #8f97b0; }
 
 .unity-panel.menubar.menuitem,
 .unity-panel.menubar .menuitem {
@@ -6264,7 +6264,7 @@ window.thunar toolbar > toolitem > widget > widget.linked.path-bar > button.path
     background-image: none;
     border: none;
     box-shadow: none;
-    color: #585b70;
+    color: #8f97b0;
     padding: 4px 8px;
 }
 
@@ -6285,7 +6285,7 @@ window.thunar toolbar > toolitem > widget > widget.linked.path-bar > button.path
 
 .nemo-window .action-bar button:backdrop,
 .nemo-window statusbar button:backdrop {
-    color: #585b70;
+    color: #8f97b0;
     background-color: transparent;
     background-image: none;
     border: none;

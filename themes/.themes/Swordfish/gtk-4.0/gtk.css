@@ -5477,7 +5477,7 @@ button.raven-trigger {
       color: #c0caf5; }
     .raven .powerstrip button.image-button:active {
       transition: 170ms ease all;
-      background: #585b70;
+      background: #8f97b0;
       color: #c0caf5; }
     .raven .powerstrip button.image-button:first-child {
       background: rgba(113, 200, 208, 0.7); }
