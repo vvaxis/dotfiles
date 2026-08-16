@@ -3,16 +3,16 @@
  * ──────────────────────────────────────────────────────────────────── */
 
 /* ─── Legacy GTK3 variables ───────────────────────────────────────── */
-@define-color theme_bg_color #0a0c12;
+@define-color theme_bg_color #010204;
 @define-color theme_fg_color #c0caf5;
-@define-color theme_base_color #0a0c12;
+@define-color theme_base_color #010204;
 @define-color theme_text_color #c0caf5;
 @define-color theme_selected_bg_color #47d6e3;
-@define-color theme_selected_fg_color #0a0c12;
+@define-color theme_selected_fg_color #010204;
 
-@define-color theme_unfocused_bg_color #0a0c12;
+@define-color theme_unfocused_bg_color #010204;
 @define-color theme_unfocused_fg_color #c0caf5;
-@define-color theme_unfocused_base_color #0a0c12;
+@define-color theme_unfocused_base_color #010204;
 @define-color theme_unfocused_text_color #c0caf5;
 @define-color theme_unfocused_selected_bg_color #47d6e3;
 
@@ -23,51 +23,51 @@
 
 /* ─── libadwaita-compatible variables ────────────────────────────── */
 @define-color accent_bg_color #47d6e3;
-@define-color accent_fg_color #0a0c12;
+@define-color accent_fg_color #010204;
 @define-color accent_color #47d6e3;
 
-@define-color window_bg_color #0a0c12;
+@define-color window_bg_color #010204;
 @define-color window_fg_color #c0caf5;
 
-@define-color view_bg_color #0a0c12;
+@define-color view_bg_color #010204;
 @define-color view_fg_color #c0caf5;
 
 @define-color headerbar_bg_color #1a1530;
 @define-color headerbar_fg_color #c0caf5;
 @define-color headerbar_border_color #585b70;
 @define-color headerbar_backdrop_color #1a1530;
-@define-color headerbar_shade_color rgba(10, 12, 18, 0.36);
+@define-color headerbar_shade_color rgba(1, 2, 4, 0.36);
 
 @define-color sidebar_bg_color #1a1530;
 @define-color sidebar_fg_color #c0caf5;
 @define-color sidebar_backdrop_color #1a1530;
 @define-color sidebar_border_color #585b70;
-@define-color sidebar_shade_color rgba(10, 12, 18, 0.36);
+@define-color sidebar_shade_color rgba(1, 2, 4, 0.36);
 
 @define-color card_bg_color #1a1530;
 @define-color card_fg_color #c0caf5;
-@define-color card_shade_color rgba(10, 12, 18, 0.36);
+@define-color card_shade_color rgba(1, 2, 4, 0.36);
 
 @define-color dialog_bg_color #1a1530;
 @define-color dialog_fg_color #c0caf5;
 
 @define-color popover_bg_color #1a1530;
 @define-color popover_fg_color #c0caf5;
-@define-color popover_shade_color rgba(10, 12, 18, 0.36);
+@define-color popover_shade_color rgba(1, 2, 4, 0.36);
 
-@define-color shade_color rgba(10, 12, 18, 0.36);
-@define-color scrollbar_outline_color rgba(10, 12, 18, 0.5);
+@define-color shade_color rgba(1, 2, 4, 0.36);
+@define-color scrollbar_outline_color rgba(1, 2, 4, 0.5);
 
 @define-color destructive_bg_color #e56b99;
 @define-color destructive_fg_color #c0caf5;
 @define-color destructive_color #e56b99;
 
 @define-color success_bg_color #05cb0d;
-@define-color success_fg_color #0a0c12;
+@define-color success_fg_color #010204;
 @define-color success_color #05cb0d;
 
 @define-color warning_bg_color #d4a030;
-@define-color warning_fg_color #0a0c12;
+@define-color warning_fg_color #010204;
 @define-color warning_color #d4a030;
 
 @define-color error_bg_color #e56b99;
@@ -80,12 +80,12 @@
 
 /* ─── Base surfaces ───────────────────────────────────────────────── */
 window, .background {
-    background-color: #0a0c12;
+    background-color: #010204;
     color: #c0caf5;
 }
 
 treeview, treeview.view, list, listbox, .view {
-    background-color: #0a0c12;
+    background-color: #010204;
     color: #c0caf5;
 }
 
@@ -111,7 +111,7 @@ menu, .menu {
 }
 
 statusbar {
-    background-color: #0a0c12;
+    background-color: #010204;
     color: #585b70;
 }
 
@@ -149,12 +149,12 @@ button:checked {
 
 button.suggested-action {
     background-color: #47d6e3;
-    color: #0a0c12;
+    color: #010204;
 }
 
 button.suggested-action:hover {
     background-color: #3eb8a4;
-    color: #0a0c12;
+    color: #010204;
 }
 
 button.destructive-action {
@@ -209,7 +209,7 @@ switch:checked {
 }
 
 switch:checked slider {
-    color: #0a0c12;
+    color: #010204;
 }
 
 /* ─── Checkbuttons & radiobuttons — green = confirmed ────────────── */
@@ -218,7 +218,7 @@ radiobutton radio:checked,
 check:checked,
 radio:checked {
     background-color: #05cb0d;
-    color: #0a0c12;
+    color: #010204;
 }
 
 /* ─── Progress bar — cyan = active data ──────────────────────────── */
@@ -259,7 +259,7 @@ list row:hover, row:hover {
 /* Text selection (entries, text views) — solid cyan for readability */
 selection, *:selected {
     background-color: #47d6e3;
-    color: #0a0c12;
+    color: #010204;
 }
 
 /* ─── Separators ─────────────────────────────────────────────────── */
@@ -287,7 +287,7 @@ notebook tab:checked {
 }
 
 notebook tab {
-    background-color: #0a0c12;
+    background-color: #010204;
     color: #585b70;
 }
 

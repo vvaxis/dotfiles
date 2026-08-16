@@ -5,7 +5,7 @@
  */
 
 * {
-    bg:         #0a0c12;
+    bg:         #010204;
     fg:         #c0caf5;
     accent:     #8a56dc;
     accent-alt: #47d6e3;
@@ -24,7 +24,7 @@ window {
     border: 1px solid;
     border-color: @border-c;
     border-radius: 0;
-    background-color: rgba(10, 12, 18, 0.92);
+    background-color: rgba(1, 2, 4, 0.92);
     padding: 8px;
 }
 

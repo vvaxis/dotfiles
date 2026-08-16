@@ -7,16 +7,16 @@
 @define-color red #e56b99;
 
 /* default color scheme */
-@define-color bg_color #0a0c12;
+@define-color bg_color #010204;
 @define-color fg_color #c0caf5;
 @define-color base_color #1a1530;
 @define-color text_color #c0caf5;
 @define-color borders transparent;
-@define-color header_bg_color #0a0c12;
+@define-color header_bg_color #010204;
 @define-color header_fg_color #c0caf5;
 /* Layer 2: cyan accent for Screens */
 @define-color selected_bg_color #47d6e3;
-@define-color selected_fg_color #0a0c12;
+@define-color selected_fg_color #010204;
 @define-color tooltip_bg_color #c0caf5;
 @define-color tooltip_fg_color #2d2930;
 

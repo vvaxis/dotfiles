@@ -28,7 +28,7 @@ $character"""
 
 [username]
 show_always = true
-style_user = "bg:#8a56dc fg:#0a0c12 bold"
+style_user = "bg:#8a56dc fg:#010204 bold"
 format = "[ $user ]($style)"
 
 [hostname]

@@ -17,9 +17,9 @@
 }
 
 /* Swordfish palette — managed by recolor.sh */
-@define-color background #0a0c12;
+@define-color background #010204;
 @define-color foreground #c0caf5;
-@define-color color0 #0a0c12;
+@define-color color0 #010204;
 @define-color color1 #e56b99;
 @define-color color2 #05cb0d;
 @define-color color3 #d4a030;

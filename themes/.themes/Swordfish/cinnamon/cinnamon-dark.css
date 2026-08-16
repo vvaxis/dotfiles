@@ -1217,7 +1217,7 @@ StScrollBar {
   spacing: 6px;
   color: #c0caf5;
   border: 1px solid rgba(27, 25, 34, 0.9);
-  background-color: #0a0c12;
+  background-color: #010204;
   border-radius: 0px;
   padding: 6px 12px 12px 12px;
   font-size: 1em; }
@@ -1278,7 +1278,7 @@ StScrollBar {
 .grouped-window-list-thumbnail-menu {
   color: #c0caf5;
   border: 1px solid rgba(27, 25, 34, 0.9);
-  background-color: #0a0c12;
+  background-color: #010204;
   border-radius: 0px;
   padding: 0px; }
   .grouped-window-list-thumbnail-menu > StBoxLayout {
@@ -1605,28 +1605,28 @@ StScrollBar {
   font-size: 1em; }
 
 .polkit-dialog-user-combo, .audio-device-selection-dialog .audio-selection-box .audio-selection-device {
-  border: 1px solid #0a0c12;
+  border: 1px solid #010204;
   color: #c0caf5;
-  background-color: #0a0c12; }
+  background-color: #010204; }
   .polkit-dialog-user-combo:focus, .audio-device-selection-dialog .audio-selection-box .audio-selection-device:focus {
-    border: 1px solid #0a0c12;
+    border: 1px solid #010204;
     color: #c0caf5;
-    background-color: #0a0c12;
+    background-color: #010204;
     border: 1px solid #3e4055; }
   .polkit-dialog-user-combo:hover, .audio-device-selection-dialog .audio-selection-box .audio-selection-device:hover {
-    border: 1px solid #0a0c12;
+    border: 1px solid #010204;
     color: #c0caf5;
     background-color: #393346; }
   .polkit-dialog-user-combo:insensitive, .audio-device-selection-dialog .audio-selection-box .audio-selection-device:insensitive {
-    border: 1px solid #0a0c12;
+    border: 1px solid #010204;
     color: rgba(247, 245, 242, 0.5);
-    background-color: #0a0c12; }
+    background-color: #010204; }
   .polkit-dialog-user-combo:selected, .audio-device-selection-dialog .audio-selection-box .audio-selection-device:selected, .polkit-dialog-user-combo:active, .audio-device-selection-dialog .audio-selection-box .audio-selection-device:active {
-    border: 1px solid #0a0c12;
+    border: 1px solid #010204;
     color: #c0caf5;
     background-color: #2d2937; }
   .polkit-dialog-user-combo:checked, .audio-device-selection-dialog .audio-selection-box .audio-selection-device:checked {
-    border: 1px solid #0a0c12;
+    border: 1px solid #010204;
     color: #c0caf5;
     background-color: #2d2937; }
 
@@ -1879,7 +1879,7 @@ StScrollBar {
 
 .resize-popup {
   color: #c0caf5;
-  background-color: #0a0c12;
+  background-color: #010204;
   border-radius: 0px;
   padding: 12px; }
 
