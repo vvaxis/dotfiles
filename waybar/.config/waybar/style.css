@@ -90,23 +90,26 @@ window#waybar.hidden {
   margin: 3px 1px;
   border-radius: 0;
   background: transparent;
-  color: @foreground;
+  color: @color8;
   font-family: "DepartureMono Nerd Font", monospace;
   font-weight: 600;
   font-size: 12pt;
   border: none;
 }
 
-/* Active workspace — purple tint + bottom accent + bold */
-#workspaces button.active {
+/* Inativo com mouse em cima — acende */
+#workspaces button:hover {
+  color: @background;
+  background: @color8;
+}
+
+/* Ativo — bloco sólido. Declarado depois do :hover, e com :hover
+   próprio, para o mouse não rebaixar o ativo a inativo. */
+#workspaces button.active,
+#workspaces button.active:hover {
   color: @background;
   background: @color4;
   font-weight: 700;
-}
-
-#workspaces button:hover {
-  color: @foreground;
-  background: transparent;
 }
 
 #workspaces button.urgent {
