@@ -6,16 +6,16 @@ scan_timeout = 100
 format = """
 [](fg:#8a56dc)\
 $username\
-[](fg:#8a56dc bg:#6c35c4)\
+[](fg:#8a56dc bg:#7449b8)\
 $hostname\
-[](fg:#6c35c4 bg:#4f46b5)\
+[](fg:#7449b8 bg:#5e3d94)\
 $os\
-[](fg:#4f46b5 bg:#3d2e8a)\
+[](fg:#5e3d94 bg:#483170)\
 $directory\
-[](fg:#3d2e8a bg:#332680)\
+[](fg:#483170 bg:#32254c)\
 $git_branch\
 $git_status\
-[](fg:#332680)\
+[](fg:#32254c)\
 $fill\
 $cmd_duration\
 $python\
@@ -33,30 +33,30 @@ format = "[ $user ]($style)"
 
 [hostname]
 ssh_only = false
-style = "bg:#6c35c4 fg:#c0caf5 bold"
+style = "bg:#7449b8 fg:#c0caf5 bold"
 format = "[ $hostname ]($style)"
 
 [os]
 disabled = false
-style = "bg:#4f46b5 fg:#c0caf5 bold"
+style = "bg:#5e3d94 fg:#c0caf5 bold"
 
 [os.symbols]
 Arch = " 󰣇 "
 Linux = " "
 
 [directory]
-style = "bg:#3d2e8a fg:#c0caf5 bold"
+style = "bg:#483170 fg:#c0caf5 bold"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
 symbol = " "
-style = "bg:#332680 fg:#c0caf5"
+style = "bg:#32254c fg:#c0caf5"
 format = "[ $symbol$branch ]($style)"
 
 [git_status]
-style = "bg:#332680 fg:#d4a031"
+style = "bg:#32254c fg:#d4a031"
 format = "[$all_status$ahead_behind ]($style)"
 
 [fill]
