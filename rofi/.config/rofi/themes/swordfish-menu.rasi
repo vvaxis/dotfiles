@@ -7,10 +7,10 @@
 * {
     bg:         #0a0c12;
     fg:         #c0caf5;
-    accent:     #8a6bc4;
-    accent-alt: #8ed4dd;
+    accent:     #8a56dc;
+    accent-alt: #47d6e3;
     border-c:   #4f46b5;
-    warning:    #d97a9e;
+    warning:    #e56b99;
     success:    #05cb0d;
 
     font: "DepartureMono Nerd Font 12";
@@ -79,7 +79,7 @@ element-icon {
 }
 
 element selected {
-    background-color: rgba(138, 107, 196, 0.18);
+    background-color: rgba(138, 86, 220, 0.18);
     text-color: @fg;
     border: 0px 0px 0px 2px;
     border-color: @accent;
@@ -92,7 +92,7 @@ button {
 }
 
 button selected {
-    background-color: rgba(142, 212, 221, 0.18);
+    background-color: rgba(71, 214, 227, 0.18);
     text-color: @fg;
 }
 

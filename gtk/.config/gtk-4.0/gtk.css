@@ -3,9 +3,9 @@
  * ──────────────────────────────────────────────────────────────────── */
 
 /* ─── Core backgrounds & foregrounds ──────────────────────────────── */
-@define-color accent_bg_color #8ed4dd;
+@define-color accent_bg_color #47d6e3;
 @define-color accent_fg_color #0a0c12;
-@define-color accent_color #8ed4dd;
+@define-color accent_color #47d6e3;
 
 @define-color window_bg_color #0a0c12;
 @define-color window_fg_color #c0caf5;
@@ -42,9 +42,9 @@
 @define-color scrollbar_outline_color rgba(10, 12, 18, 0.5);
 
 /* ─── Semantic status colors ─────────────────────────────────────── */
-@define-color destructive_bg_color #d97a9e;
+@define-color destructive_bg_color #e56b99;
 @define-color destructive_fg_color #c0caf5;
-@define-color destructive_color #d97a9e;
+@define-color destructive_color #e56b99;
 
 @define-color success_bg_color #05cb0d;
 @define-color success_fg_color #0a0c12;
@@ -54,9 +54,9 @@
 @define-color warning_fg_color #0a0c12;
 @define-color warning_color #d4a030;
 
-@define-color error_bg_color #d97a9e;
+@define-color error_bg_color #e56b99;
 @define-color error_fg_color #c0caf5;
-@define-color error_color #d97a9e;
+@define-color error_color #e56b99;
 
 /* ═══════════════════════════════════════════════════════════════════
  * Widget overrides
@@ -78,7 +78,7 @@ window.background {
 /* ─── Headerbar — cyan bottom stripe (active display indicator) ──── */
 headerbar {
     background-color: rgba(26, 21, 48, 0.90);
-    border-bottom: 3px solid #8ed4dd;
+    border-bottom: 3px solid #47d6e3;
 }
 
 headerbar:backdrop {
@@ -105,7 +105,7 @@ button:checked {
 }
 
 button.suggested-action {
-    background-color: #8ed4dd;
+    background-color: #47d6e3;
     color: #0a0c12;
 }
 
@@ -115,7 +115,7 @@ button.suggested-action:hover {
 }
 
 button.destructive-action {
-    background-color: #d97a9e;
+    background-color: #e56b99;
     color: #c0caf5;
 }
 
@@ -130,8 +130,8 @@ entry {
 }
 
 entry:focus-within {
-    border-color: #8ed4dd;
-    outline-color: rgba(142, 212, 221, 0.3);
+    border-color: #47d6e3;
+    outline-color: rgba(71, 214, 227, 0.3);
 }
 
 /* ─── Links ───────────────────────────────────────────────────────── */
@@ -185,7 +185,7 @@ progressbar trough {
 }
 
 progressbar progress {
-    background-color: #8ed4dd;
+    background-color: #47d6e3;
 }
 
 /* ─── Scale (sliders) — cyan fill ────────────────────────────────── */
@@ -194,7 +194,7 @@ scale trough {
 }
 
 scale highlight {
-    background-color: #8ed4dd;
+    background-color: #47d6e3;
 }
 
 scale slider {
@@ -203,7 +203,7 @@ scale slider {
 
 /* ─── Text selection ─────────────────────────────────────────────── */
 selection {
-    background-color: #8ed4dd;
+    background-color: #47d6e3;
     color: #0a0c12;
 }
 
@@ -221,11 +221,11 @@ tooltip, tooltip.background {
 
 /* ─── List rows ──────────────────────────────────────────────────── */
 row:hover, list row:hover {
-    background-color: rgba(142, 212, 221, 0.10);
+    background-color: rgba(71, 214, 227, 0.10);
 }
 
 row:selected, list row:selected {
-    background-color: rgba(142, 212, 221, 0.25);
+    background-color: rgba(71, 214, 227, 0.25);
     color: #c0caf5;
 }
 
@@ -238,16 +238,16 @@ window.background:backdrop {
 tabbar tab:checked {
     background-color: #1a1530;
     color: #c0caf5;
-    border-bottom: 2px solid #8ed4dd;
+    border-bottom: 2px solid #47d6e3;
 }
 
 notebook > header > tabs > tab:checked {
     background-color: #1a1530;
     color: #c0caf5;
-    border-bottom: 2px solid #8ed4dd;
+    border-bottom: 2px solid #47d6e3;
 }
 
 /* ─── Focus ring ─────────────────────────────────────────────────── */
 *:focus-visible {
-    outline-color: #8ed4dd;
+    outline-color: #47d6e3;
 }

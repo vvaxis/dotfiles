@@ -196,9 +196,9 @@ GtkIconView.view.cell:selected:focus {
 .rubberband {
     border-width: 1px;
     border-style: solid;
-    border-color: #8ed4dd;
+    border-color: #47d6e3;
     border-radius: 0;
-    background-color: rgba(142, 212, 221, 0.15);
+    background-color: rgba(71, 214, 227, 0.15);
 }
 /*****************
  * miscellaneous *
@@ -254,7 +254,7 @@ GtkIconView.view.cell:selected:focus {
 .dnd {
     border-width: 1px;
     border-style: solid;
-    border-color: #8ed4dd;
+    border-color: #47d6e3;
 }
 
 .grip {

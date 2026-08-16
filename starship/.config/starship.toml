@@ -4,9 +4,9 @@ add_newline = false
 scan_timeout = 100
 
 format = """
-[](fg:#8a6bc4)\
+[](fg:#8a56dc)\
 $username\
-[](fg:#8a6bc4 bg:#6c35c4)\
+[](fg:#8a56dc bg:#6c35c4)\
 $hostname\
 [](fg:#6c35c4 bg:#4f46b5)\
 $os\
@@ -28,7 +28,7 @@ $character"""
 
 [username]
 show_always = true
-style_user = "bg:#8a6bc4 fg:#0a0c12 bold"
+style_user = "bg:#8a56dc fg:#0a0c12 bold"
 format = "[ $user ]($style)"
 
 [hostname]
@@ -69,7 +69,7 @@ format = "[$duration ]($style)"
 
 [character]
 success_symbol = "[>>>](bold #3eb8a4)"
-error_symbol = "[>>>](bold #d97a9e)"
+error_symbol = "[>>>](bold #e56b99)"
 
 [python]
 symbol = " "
