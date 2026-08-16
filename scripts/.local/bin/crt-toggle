@@ -1,0 +1,19 @@
+#!/bin/bash
+# Liga/desliga o shader de curvatura de CRT.
+# O cursor de hardware não é distorcido junto, então ele é trocado por
+# cursor de software enquanto o shader está ativo — sem isso o ponteiro
+# não bate com o que você vê nas bordas.
+
+SHADER="$HOME/.config/hypr/shaders/crt.frag"
+
+current=$(hyprctl getoption decoration:screen_shader -j | jq -r '.str // ""')
+
+if [ -n "$current" ] && [ "$current" != "[[EMPTY]]" ]; then
+    hyprctl keyword decoration:screen_shader "[[EMPTY]]" > /dev/null
+    hyprctl keyword cursor:no_hardware_cursors 2 > /dev/null   # 2 = auto
+    notify-send -t 1500 "CRT" "desligado"
+else
+    hyprctl keyword decoration:screen_shader "$SHADER" > /dev/null
+    hyprctl keyword cursor:no_hardware_cursors 1 > /dev/null
+    notify-send -t 1500 "CRT" "ligado"
+fi
