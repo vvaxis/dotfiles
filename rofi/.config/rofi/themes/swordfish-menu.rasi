@@ -13,7 +13,7 @@
     warning:    #e56b99;
     success:    #05cb0d;
 
-    font: "DepartureMono Nerd Font 12";
+    font: "DepartureMono Nerd Font 13";
     text-color: @fg;
     background-color: transparent;
 }
@@ -39,7 +39,7 @@ inputbar {
 prompt {
     content: ">>>";
     text-color: @accent-alt;
-    font: "DepartureMono Nerd Font Bold 10";
+    font: "DepartureMono Nerd Font Bold 11";
     vertical-align: 0.5;
 }
 
