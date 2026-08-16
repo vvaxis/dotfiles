@@ -7,7 +7,7 @@
 /* ===== Reset ===== */
 * {
   font-family: "DepartureMono Nerd Font", monospace;
-  font-size: 13px;
+  font-size: 12px;
   border: none;
   border-radius: 0;
   min-height: 0;
@@ -52,16 +52,15 @@ window#waybar.hidden {
 .modules-left,
 .modules-center,
 .modules-right {
-  background: alpha(@background, 0.82);
-  margin: 4px 6px;
-  padding: 0 4px;
-  border: 1px solid alpha(@color4, 0.25);
+  background: @background;
+  margin: 3px 5px;
+  padding: 0 3px;
+  border: none;
   border-radius: 0;
 }
 
 .modules-left {
-  margin-left: 10px;
-  border-left: 2px solid alpha(@color4, 0.55);
+  margin-left: 6px;
 }
 
 .modules-center {
@@ -69,8 +68,7 @@ window#waybar.hidden {
 }
 
 .modules-right {
-  margin-right: 10px;
-  border-right: 2px solid alpha(@color4, 0.55);
+  margin-right: 6px;
 }
 
 
@@ -88,37 +86,33 @@ window#waybar.hidden {
 #workspaces button {
   all: initial;
   min-width: 0;
-  padding: 6px 18px;
-  margin: 4px 1px;
+  padding: 2px 11px;
+  margin: 3px 1px;
   border-radius: 0;
   background: transparent;
   color: @foreground;
   font-family: "DepartureMono Nerd Font", monospace;
   font-weight: 600;
-  font-size: 12pt;
+  font-size: 11pt;
   border: none;
-  border-bottom: 2px solid transparent;
-  transition: all 0.1s ease;
 }
 
 /* Active workspace — purple tint + bottom accent + bold */
 #workspaces button.active {
-  color: @foreground;
-  background: alpha(@color4, 0.25);
-  border-bottom: 3px solid @color4;
-  font-weight: 800;
+  color: @background;
+  background: @color4;
+  font-weight: 700;
 }
 
 #workspaces button:hover {
   color: @foreground;
-  background: alpha(@color4, 0.10);
-  border-bottom: 2px solid alpha(@color4, 0.40);
+  background: transparent;
 }
 
 #workspaces button.urgent {
-  color: @foreground;
-  background: alpha(@color1, 0.20);
-  border-bottom: 3px solid @color1;
+  color: @background;
+  background: @color1;
+  font-weight: 700;
 }
 
 
@@ -139,8 +133,8 @@ window#waybar.hidden {
 #wireplumber,
 #bluetooth,
 #pulseaudio {
-  padding: 4px 10px;
-  margin: 4px 1px;
+  padding: 2px 8px;
+  margin: 3px 0px;
   color: @foreground;
   background: transparent;
   font-weight: 400;
@@ -160,7 +154,6 @@ window#waybar.hidden {
 #clock {
   color: @color6;
   font-weight: 700;
-  border-bottom: 2px solid @color4;
 }
 
 /* Power button — isolated, larger */
@@ -168,9 +161,8 @@ window#waybar.hidden {
   color: @color4;
   font-size: 16px;
   font-weight: 800;
-  padding: 4px 12px;
-  margin-right: 6px;
-  border-right: 1px solid alpha(@color4, 0.30);
+  padding: 2px 10px;
+  margin-right: 2px;
 }
 
 
@@ -179,8 +171,8 @@ window#waybar.hidden {
 
 #custom-media {
   color: @foreground;
-  margin: 4px 2px;
-  padding: 4px 10px;
+  margin: 3px 2px;
+  padding: 2px 8px;
   font-weight: 500;
   border-radius: 0;
   border-left: 2px solid @color8;
@@ -200,9 +192,7 @@ window#waybar.hidden {
 /* ===== Utilities group — language + idle, separated from comms ===== */
 
 #language {
-  border-left: 1px solid alpha(@color4, 0.30);
-  margin-left: 4px;
-  padding-left: 14px;
+  color: @color8;
 }
 
 
@@ -234,9 +224,6 @@ window#waybar.hidden {
 /* --- Network: green = connected, pink = down --- */
 #network {
   color: @color2;
-  border-left: 1px solid alpha(@color4, 0.30);
-  margin-left: 4px;
-  padding-left: 14px;
 }
 
 #network.disconnected {
@@ -295,7 +282,8 @@ window#waybar.hidden {
 #language:hover,
 #custom-power:hover,
 #custom-dunst:hover {
-  background: alpha(@color4, 0.10);
+  background: @color8;
+  color: @background;
 }
 
 
@@ -312,8 +300,8 @@ window#waybar.hidden {
 tooltip {
   border-radius: 0;
   padding: 10px;
-  background-color: alpha(@background, 0.95);
-  border: 1px solid alpha(@color4, 0.25);
+  background-color: @background;
+  border: 1px solid @color8;
 }
 
 tooltip label {
@@ -321,3 +309,14 @@ tooltip label {
   background: transparent;
   color: @foreground;
 }
+
+
+/* ===== Cor por instrumento — sem bordas, a cor faz a separação ===== */
+#cpu          { color: @color12; }
+#memory       { color: @color5;  }
+#temperature  { color: @color10; }
+#wireplumber,
+#pulseaudio   { color: @color10; }
+#bluetooth    { color: @color12; }
+#idle_inhibitor { color: @color8; }
+#custom-dunst { color: @color8; }
