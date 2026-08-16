@@ -10,7 +10,7 @@
     
     # Aparência
     frame_width = 1
-    frame_color = "#8a42f4"
+    frame_color = "#8a6bc4"
     separator_color = frame
     corner_radius = 0
     transparency = 15
@@ -58,6 +58,6 @@
 
 [urgency_critical]
     background = "#1a1530"
-    foreground = "#f25d94"
-    frame_color = "#f25d94"
+    foreground = "#d97a9e"
+    frame_color = "#d97a9e"
     timeout = 0

@@ -3,14 +3,14 @@
  * ──────────────────────────────────────────────────────────────────── */
 
 /* ─── Core backgrounds & foregrounds ──────────────────────────────── */
-@define-color accent_bg_color #00d9e9;
-@define-color accent_fg_color #0d0c1a;
-@define-color accent_color #00d9e9;
+@define-color accent_bg_color #8ed4dd;
+@define-color accent_fg_color #0a0c12;
+@define-color accent_color #8ed4dd;
 
-@define-color window_bg_color #0d0c1a;
+@define-color window_bg_color #0a0c12;
 @define-color window_fg_color #c0caf5;
 
-@define-color view_bg_color #0d0c1a;
+@define-color view_bg_color #0a0c12;
 @define-color view_fg_color #c0caf5;
 
 /* ─── Elevated surfaces ───────────────────────────────────────────── */
@@ -18,45 +18,45 @@
 @define-color headerbar_fg_color #c0caf5;
 @define-color headerbar_border_color #585b70;
 @define-color headerbar_backdrop_color #1a1530;
-@define-color headerbar_shade_color rgba(13, 12, 26, 0.36);
+@define-color headerbar_shade_color rgba(10, 12, 18, 0.36);
 
 @define-color sidebar_bg_color #1a1530;
 @define-color sidebar_fg_color #c0caf5;
 @define-color sidebar_backdrop_color #1a1530;
 @define-color sidebar_border_color #585b70;
-@define-color sidebar_shade_color rgba(13, 12, 26, 0.36);
+@define-color sidebar_shade_color rgba(10, 12, 18, 0.36);
 
 @define-color card_bg_color #1a1530;
 @define-color card_fg_color #c0caf5;
-@define-color card_shade_color rgba(13, 12, 26, 0.36);
+@define-color card_shade_color rgba(10, 12, 18, 0.36);
 
 @define-color dialog_bg_color #1a1530;
 @define-color dialog_fg_color #c0caf5;
 
 @define-color popover_bg_color #1a1530;
 @define-color popover_fg_color #c0caf5;
-@define-color popover_shade_color rgba(13, 12, 26, 0.36);
+@define-color popover_shade_color rgba(10, 12, 18, 0.36);
 
 /* ─── Global shade & scrollbar ───────────────────────────────────── */
-@define-color shade_color rgba(13, 12, 26, 0.36);
-@define-color scrollbar_outline_color rgba(13, 12, 26, 0.5);
+@define-color shade_color rgba(10, 12, 18, 0.36);
+@define-color scrollbar_outline_color rgba(10, 12, 18, 0.5);
 
 /* ─── Semantic status colors ─────────────────────────────────────── */
-@define-color destructive_bg_color #f25d94;
+@define-color destructive_bg_color #d97a9e;
 @define-color destructive_fg_color #c0caf5;
-@define-color destructive_color #f25d94;
+@define-color destructive_color #d97a9e;
 
 @define-color success_bg_color #05cb0d;
-@define-color success_fg_color #0d0c1a;
+@define-color success_fg_color #0a0c12;
 @define-color success_color #05cb0d;
 
 @define-color warning_bg_color #d4a030;
-@define-color warning_fg_color #0d0c1a;
+@define-color warning_fg_color #0a0c12;
 @define-color warning_color #d4a030;
 
-@define-color error_bg_color #f25d94;
+@define-color error_bg_color #d97a9e;
 @define-color error_fg_color #c0caf5;
-@define-color error_color #f25d94;
+@define-color error_color #d97a9e;
 
 /* ═══════════════════════════════════════════════════════════════════
  * Widget overrides
@@ -64,7 +64,7 @@
 
 /* ─── Base surfaces — transparent (GTK4 supports native RGBA) ────── */
 window.background {
-    background-color: rgba(13, 12, 26, 0.82);
+    background-color: rgba(10, 12, 18, 0.82);
 }
 
 .sidebar, .navigation-sidebar {
@@ -72,13 +72,13 @@ window.background {
 }
 
 .view, list, listview {
-    background-color: rgba(13, 12, 26, 0.82);
+    background-color: rgba(10, 12, 18, 0.82);
 }
 
 /* ─── Headerbar — cyan bottom stripe (active display indicator) ──── */
 headerbar {
     background-color: rgba(26, 21, 48, 0.90);
-    border-bottom: 3px solid #00d9e9;
+    border-bottom: 3px solid #8ed4dd;
 }
 
 headerbar:backdrop {
@@ -105,17 +105,17 @@ button:checked {
 }
 
 button.suggested-action {
-    background-color: #00d9e9;
-    color: #0d0c1a;
+    background-color: #8ed4dd;
+    color: #0a0c12;
 }
 
 button.suggested-action:hover {
     background-color: #3eb8a4;
-    color: #0d0c1a;
+    color: #0a0c12;
 }
 
 button.destructive-action {
-    background-color: #f25d94;
+    background-color: #d97a9e;
     color: #c0caf5;
 }
 
@@ -130,8 +130,8 @@ entry {
 }
 
 entry:focus-within {
-    border-color: #00d9e9;
-    outline-color: rgba(0, 217, 233, 0.3);
+    border-color: #8ed4dd;
+    outline-color: rgba(142, 212, 221, 0.3);
 }
 
 /* ─── Links ───────────────────────────────────────────────────────── */
@@ -167,7 +167,7 @@ switch:checked {
 }
 
 switch:checked slider {
-    color: #0d0c1a;
+    color: #0a0c12;
 }
 
 /* ─── Checkbuttons & radiobuttons — green = confirmed ────────────── */
@@ -176,7 +176,7 @@ radiobutton indicator:checked,
 check:checked,
 radio:checked {
     background-color: #05cb0d;
-    color: #0d0c1a;
+    color: #0a0c12;
 }
 
 /* ─── Progress bar — cyan = active data ──────────────────────────── */
@@ -185,7 +185,7 @@ progressbar trough {
 }
 
 progressbar progress {
-    background-color: #00d9e9;
+    background-color: #8ed4dd;
 }
 
 /* ─── Scale (sliders) — cyan fill ────────────────────────────────── */
@@ -194,7 +194,7 @@ scale trough {
 }
 
 scale highlight {
-    background-color: #00d9e9;
+    background-color: #8ed4dd;
 }
 
 scale slider {
@@ -203,8 +203,8 @@ scale slider {
 
 /* ─── Text selection ─────────────────────────────────────────────── */
 selection {
-    background-color: #00d9e9;
-    color: #0d0c1a;
+    background-color: #8ed4dd;
+    color: #0a0c12;
 }
 
 /* ─── Separators ─────────────────────────────────────────────────── */
@@ -221,11 +221,11 @@ tooltip, tooltip.background {
 
 /* ─── List rows ──────────────────────────────────────────────────── */
 row:hover, list row:hover {
-    background-color: rgba(0, 217, 233, 0.10);
+    background-color: rgba(142, 212, 221, 0.10);
 }
 
 row:selected, list row:selected {
-    background-color: rgba(0, 217, 233, 0.25);
+    background-color: rgba(142, 212, 221, 0.25);
     color: #c0caf5;
 }
 
@@ -238,16 +238,16 @@ window.background:backdrop {
 tabbar tab:checked {
     background-color: #1a1530;
     color: #c0caf5;
-    border-bottom: 2px solid #00d9e9;
+    border-bottom: 2px solid #8ed4dd;
 }
 
 notebook > header > tabs > tab:checked {
     background-color: #1a1530;
     color: #c0caf5;
-    border-bottom: 2px solid #00d9e9;
+    border-bottom: 2px solid #8ed4dd;
 }
 
 /* ─── Focus ring ─────────────────────────────────────────────────── */
 *:focus-visible {
-    outline-color: #00d9e9;
+    outline-color: #8ed4dd;
 }

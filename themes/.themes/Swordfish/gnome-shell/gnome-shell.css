@@ -257,7 +257,7 @@ StScrollBar {
 .end-session-dialog {
   border: none; }
   .end-session-dialog .modal-dialog-linked-button:last-child, .end-session-dialog .modal-dialog-button:last-child {
-    background-color: #f25d94;
+    background-color: #d97a9e;
     color: #fff; }
     .end-session-dialog .modal-dialog-linked-button:last-child:hover, .end-session-dialog .modal-dialog-linked-button:last-child:focus, .end-session-dialog .modal-dialog-button:last-child:hover, .end-session-dialog .modal-dialog-button:last-child:focus {
       background: #983bef;
@@ -583,8 +583,8 @@ StScrollBar {
     color: #C3C7D1;
     -barlevel-height: 0.4em;
     -barlevel-background-color: #373a4b;
-    -barlevel-active-background-color: #00d9e9;
-    -barlevel-overdrive-color: #f25d94;
+    -barlevel-active-background-color: #8ed4dd;
+    -barlevel-overdrive-color: #d97a9e;
     -barlevel-overdrive-separator-width: 0.2em; }
   .osd-window .level-bar {
     background-color: rgba(189, 131, 244, 0.8);

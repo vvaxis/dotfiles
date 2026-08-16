@@ -5,12 +5,12 @@
  */
 
 * {
-    bg:         #0d0c1a;
+    bg:         #0a0c12;
     fg:         #c0caf5;
-    accent:     #8a42f4;
-    accent-alt: #00d9e9;
+    accent:     #8a6bc4;
+    accent-alt: #8ed4dd;
     border-c:   #4f46b5;
-    warning:    #f25d94;
+    warning:    #d97a9e;
     success:    #05cb0d;
 
     font: "DepartureMono Nerd Font 12";
@@ -24,7 +24,7 @@ window {
     border: 1px solid;
     border-color: @border-c;
     border-radius: 0;
-    background-color: rgba(13, 12, 26, 0.92);
+    background-color: rgba(10, 12, 18, 0.92);
     padding: 8px;
 }
 
@@ -79,7 +79,7 @@ element-icon {
 }
 
 element selected {
-    background-color: rgba(138, 66, 244, 0.18);
+    background-color: rgba(138, 107, 196, 0.18);
     text-color: @fg;
     border: 0px 0px 0px 2px;
     border-color: @accent;
@@ -92,7 +92,7 @@ button {
 }
 
 button selected {
-    background-color: rgba(0, 217, 233, 0.18);
+    background-color: rgba(142, 212, 221, 0.18);
     text-color: @fg;
 }
 
