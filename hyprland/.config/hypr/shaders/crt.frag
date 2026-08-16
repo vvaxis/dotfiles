@@ -17,8 +17,8 @@ in vec2 v_texcoord;
 uniform sampler2D tex;
 out vec4 fragColor;
 
-const float CURVATURE = 8.0;
-const float VIGNETTE  = 0.20;
+const float CURVATURE = 12.0;
+const float VIGNETTE  = 0.06;
 
 vec2 curve(vec2 uv) {
     uv = uv * 2.0 - 1.0;
