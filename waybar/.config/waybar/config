@@ -10,13 +10,14 @@
     
     "modules-left": [
         "custom/power",
-        "temperature",
         "memory",
-		"cpu",
+        "cpu",
+        "temperature",
+        "custom/gpu",
+        "temperature#gpu",
         "network",
         "hyprland/language",
         "idle_inhibitor"
-        
     ],
 
     

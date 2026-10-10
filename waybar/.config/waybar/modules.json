@@ -101,13 +101,18 @@
     
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false,
+        "interval": 2,
+        "tooltip": true,
+        "tooltip-format": "Carga  {load}\nFreq   {avg_frequency} GHz  (max {max_frequency})\n\nNúcleos\n{usage0}%  {usage1}%  {usage2}%  {usage3}%  {usage4}%  {usage5}%\n{usage6}%  {usage7}%  {usage8}%  {usage9}%  {usage10}%  {usage11}%",
         "on-click": "toggle-scratchpad btop btop-scratchpad kitty --class btop-scratchpad -e btop"
     },
 
     
     "memory": {
-        "format": "{}% ",
+        "format": "{}% ",
+        "interval": 5,
+        "tooltip": true,
+        "tooltip-format": "RAM   {used:0.1f} / {total:0.1f} GiB   ({percentage}%)\nLivre {avail:0.1f} GiB\n\nSwap  {swapUsed:0.1f} / {swapTotal:0.1f} GiB   ({swapPercentage}%)",
         "states": {
             "warning": 80,
             "critical": 90
@@ -117,12 +122,34 @@
 
     
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "warning-threshold": 70,
-        "critical-threshold": 85,
+        // CPU — k10temp Tctl. Caminho PCI fixo: hwmonN muda entre boots.
+        "hwmon-path-abs": "/sys/devices/pci0000:00/0000:00:18.3/hwmon",
+        "input-filename": "temp1_input",
+        "warning-threshold": 80,
+        "critical-threshold": 90,
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""],
+        "format-icons": ["", "", ""],
+        "tooltip": false,
+        "on-click": "toggle-scratchpad btop btop-scratchpad kitty --class btop-scratchpad -e btop"
+    },
+
+    "temperature#gpu": {
+        // GPU — amdgpu junction, o ponto mais quente do die (e por onde ela throttla).
+        "hwmon-path-abs": "/sys/devices/pci0000:00/0000:00:03.1/0000:0a:00.0/0000:0b:00.0/0000:0c:00.0/hwmon",
+        "input-filename": "temp2_input",
+        "warning-threshold": 90,
+        "critical-threshold": 100,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""],
+        "tooltip": false,
+        "on-click": "toggle-scratchpad btop btop-scratchpad kitty --class btop-scratchpad -e btop"
+    },
+
+    "custom/gpu": {
+        "exec": "$HOME/.local/bin/gpu-waybar.sh",
+        "return-type": "json",
+        "interval": 2,
+        "format": "{}% 󰢮",
         "on-click": "toggle-scratchpad btop btop-scratchpad kitty --class btop-scratchpad -e btop"
     },
     

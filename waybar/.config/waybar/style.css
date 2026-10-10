@@ -127,6 +127,7 @@ window#waybar.hidden {
 #memory,
 #cpu,
 #temperature,
+#custom-gpu,
 #network,
 #clock,
 #tray,
@@ -238,6 +239,21 @@ window#waybar.hidden {
   color: @color8;
 }
 
+/* --- GPU: teal. Cada instrumento e sua temperatura usam a mesma cor. --- */
+#temperature.gpu {
+  color: @color10;
+}
+
+#custom-gpu.warning {
+  color: @color3;
+  font-weight: 600;
+}
+
+#custom-gpu.critical {
+  color: @color1;
+  font-weight: 700;
+}
+
 /* --- Temperature: white = normal, amber = warning, pink = critical --- */
 #temperature.warning {
   color: @color3;
@@ -317,7 +333,8 @@ tooltip label {
 /* ===== Cor por instrumento — sem bordas, a cor faz a separação ===== */
 #cpu          { color: @color12; }
 #memory       { color: @color5;  }
-#temperature  { color: @color10; }
+#temperature  { color: @color12; }   /* temp da CPU = cor da CPU */
+#custom-gpu   { color: @color10; }
 #wireplumber,
 #pulseaudio   { color: @color10; }
 #bluetooth    { color: @color12; }
