@@ -1,0 +1,32 @@
+#!/bin/bash
+# Desarma a deteccao de Wine do The Witcher 3 Remastered, que zera a
+# capacidade de ray tracing quando o jogo percebe que roda sob Proton.
+#
+# O jogo faz GetProcAddress(ntdll, "wine_get_version"). Trocando o 'w'
+# inicial da string por 'x', a busca falha e ele conclui que esta no
+# Windows. Mesmo comprimento, nenhum byte de codigo deslocado.
+#
+# Localiza a string por busca, nao por offset fixo — entao funciona em
+# qualquer versao do jogo. Rode depois de atualizacao ou de verificacao
+# de integridade no Steam.
+
+set -u
+E="$HOME/.local/share/Steam/steamapps/common/The Witcher 3/bin/x64_dx12/witcher3.exe"
+
+[ -f "$E" ] || { echo "!! exe nao encontrado"; exit 1; }
+if ps -eo comm --no-headers | grep -qiE "witcher|gamescope"; then
+    echo "!! o jogo esta aberto — feche antes"; exit 1
+fi
+
+mapfile -t offs < <(grep -abo "wine_get_version" "$E" | cut -d: -f1)
+
+if [ "${#offs[@]}" -eq 0 ]; then
+    if grep -qa "xine_get_version" "$E"; then echo "ja aplicado."; exit 0; fi
+    echo "!! string nao encontrada — o jogo mudou o metodo de deteccao"; exit 1
+fi
+
+for off in "${offs[@]}"; do
+    printf '\x78' | dd of="$E" bs=1 seek="$off" count=1 conv=notrunc status=none
+    echo "patch em $off (0x$(printf %X "$off"))"
+done
+echo "feito — $(grep -ac "xine_get_version" "$E" 2>/dev/null || grep -abo "xine_get_version" "$E" | wc -l) ocorrencias"

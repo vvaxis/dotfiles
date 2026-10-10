@@ -44,6 +44,9 @@
     layer = overlay
     force_xwayland = false
 
+    # Nao desenhar por cima de janela fullscreen (jogo): segura ate sair do fullscreen.
+    fullscreen = pushback
+
 [urgency_low]
     background = "#1a1530"
     foreground = "#c0caf5"
@@ -60,4 +63,4 @@
     background = "#1a1530"
     foreground = "#e56b99"
     frame_color = "#e56b99"
-    timeout = 0
+    timeout = 15
